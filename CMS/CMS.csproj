@@ -52,10 +52,19 @@
     <Compile Include="AdminSignIn.Designer.cs">
       <DependentUpon>AdminSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCashier.Designer.cs">
+      <DependentUpon>AddCashier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminSignIn.resx">
       <DependentUpon>AdminSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCashier.resx">
+      <DependentUpon>AddCashier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

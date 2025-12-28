@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSignIn));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.AdminSignInPanel = new System.Windows.Forms.Panel();
             this.BtnSignIn = new System.Windows.Forms.Button();
             this.ShowPassword = new System.Windows.Forms.CheckBox();
             this.TBPassword = new System.Windows.Forms.TextBox();
@@ -39,8 +39,8 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblSignIn = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.LogoPanel = new System.Windows.Forms.Panel();
+            this.AdminSignInPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -49,21 +49,21 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // panel1
+            // AdminSignInPanel
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.BtnSignIn);
-            this.panel1.Controls.Add(this.ShowPassword);
-            this.panel1.Controls.Add(this.TBPassword);
-            this.panel1.Controls.Add(this.TBUserName);
-            this.panel1.Controls.Add(this.lblPassword);
-            this.panel1.Controls.Add(this.lblUserName);
-            this.panel1.Controls.Add(this.lblSignIn);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(-3, -5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1192, 670);
-            this.panel1.TabIndex = 0;
+            this.AdminSignInPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminSignInPanel.BackgroundImage")));
+            this.AdminSignInPanel.Controls.Add(this.BtnSignIn);
+            this.AdminSignInPanel.Controls.Add(this.ShowPassword);
+            this.AdminSignInPanel.Controls.Add(this.TBPassword);
+            this.AdminSignInPanel.Controls.Add(this.TBUserName);
+            this.AdminSignInPanel.Controls.Add(this.lblPassword);
+            this.AdminSignInPanel.Controls.Add(this.lblUserName);
+            this.AdminSignInPanel.Controls.Add(this.lblSignIn);
+            this.AdminSignInPanel.Controls.Add(this.LogoPanel);
+            this.AdminSignInPanel.Location = new System.Drawing.Point(-3, -5);
+            this.AdminSignInPanel.Name = "AdminSignInPanel";
+            this.AdminSignInPanel.Size = new System.Drawing.Size(1200, 700);
+            this.AdminSignInPanel.TabIndex = 0;
             // 
             // BtnSignIn
             // 
@@ -96,6 +96,7 @@
             this.TBPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBPassword.Location = new System.Drawing.Point(772, 238);
             this.TBPassword.Name = "TBPassword";
+            this.TBPassword.PasswordChar = '*';
             this.TBPassword.Size = new System.Drawing.Size(220, 31);
             this.TBPassword.TabIndex = 5;
             // 
@@ -115,9 +116,9 @@
             this.lblPassword.ForeColor = System.Drawing.SystemColors.Control;
             this.lblPassword.Location = new System.Drawing.Point(654, 242);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(97, 24);
+            this.lblPassword.Size = new System.Drawing.Size(102, 24);
             this.lblPassword.TabIndex = 3;
-            this.lblPassword.Text = "Password:";
+            this.lblPassword.Text = "Password :";
             this.lblPassword.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblUserName
@@ -128,9 +129,9 @@
             this.lblUserName.ForeColor = System.Drawing.SystemColors.Control;
             this.lblUserName.Location = new System.Drawing.Point(646, 174);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(105, 24);
+            this.lblUserName.Size = new System.Drawing.Size(107, 24);
             this.lblUserName.TabIndex = 2;
-            this.lblUserName.Text = "UserName:";
+            this.lblUserName.Text = "Username :";
             this.lblUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblSignIn
@@ -146,24 +147,25 @@
             this.lblSignIn.Text = "ADMIN SIGN IN";
             this.lblSignIn.Click += new System.EventHandler(this.lblSignIn_Click);
             // 
-            // panel2
+            // LogoPanel
             // 
-            this.panel2.BackgroundImage = global::CMS.Properties.Resources.logo;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(590, 666);
-            this.panel2.TabIndex = 0;
+            this.LogoPanel.BackgroundImage = global::CMS.Properties.Resources.logo;
+            this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(590, 700);
+            this.LogoPanel.TabIndex = 0;
             // 
             // AdminSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.AdminSignInPanel);
             this.Name = "AdminSignIn";
             this.Text = "Admin Sign In";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.AdminSignInPanel.ResumeLayout(false);
+            this.AdminSignInPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -171,8 +173,8 @@
         #endregion
 
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel AdminSignInPanel;
+        private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblSignIn;
         private System.Windows.Forms.Label lblPassword;
