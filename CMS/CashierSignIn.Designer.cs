@@ -29,79 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierSignIn));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCashierPassword = new System.Windows.Forms.TextBox();
-            this.lblCashierLogin = new System.Windows.Forms.Label();
-            this.txtCashierUsername = new System.Windows.Forms.TextBox();
-            this.lblCashierUsername = new System.Windows.Forms.Label();
-            this.lblCashierPassword = new System.Windows.Forms.Label();
+            this.LogoPanel = new System.Windows.Forms.Panel();
+            this.AdminSignInPanel = new System.Windows.Forms.Panel();
             this.btnCashierSignIn = new System.Windows.Forms.Button();
-            this.cbCashierShowPass = new System.Windows.Forms.CheckBox();
+            this.cbCashierShowPassword = new System.Windows.Forms.CheckBox();
+            this.tbCashierPassword = new System.Windows.Forms.TextBox();
+            this.tbCashierUserName = new System.Windows.Forms.TextBox();
+            this.lblCashierPassword = new System.Windows.Forms.Label();
+            this.lblCashierUserName = new System.Windows.Forms.Label();
+            this.lblCashierSignIn = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AdminSignInPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // LogoPanel
             // 
-            this.panel1.BackgroundImage = global::CMS.Properties.Resources.logo;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 661);
-            this.panel1.TabIndex = 0;
+            this.LogoPanel.BackgroundImage = global::CMS.Properties.Resources.logo;
+            this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(590, 661);
+            this.LogoPanel.TabIndex = 1;
             // 
-            // txtCashierPassword
+            // AdminSignInPanel
             // 
-            this.txtCashierPassword.BackColor = System.Drawing.Color.White;
-            this.txtCashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCashierPassword.Location = new System.Drawing.Point(792, 263);
-            this.txtCashierPassword.Name = "txtCashierPassword";
-            this.txtCashierPassword.Size = new System.Drawing.Size(200, 31);
-            this.txtCashierPassword.TabIndex = 2;
-            // 
-            // lblCashierLogin
-            // 
-            this.lblCashierLogin.AutoSize = true;
-            this.lblCashierLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lblCashierLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashierLogin.ForeColor = System.Drawing.Color.White;
-            this.lblCashierLogin.Location = new System.Drawing.Point(739, 111);
-            this.lblCashierLogin.Name = "lblCashierLogin";
-            this.lblCashierLogin.Size = new System.Drawing.Size(299, 39);
-            this.lblCashierLogin.TabIndex = 3;
-            this.lblCashierLogin.Text = "CASHIER LOGIN";
-            this.lblCashierLogin.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtCashierUsername
-            // 
-            this.txtCashierUsername.BackColor = System.Drawing.Color.White;
-            this.txtCashierUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCashierUsername.Location = new System.Drawing.Point(792, 200);
-            this.txtCashierUsername.Name = "txtCashierUsername";
-            this.txtCashierUsername.Size = new System.Drawing.Size(200, 31);
-            this.txtCashierUsername.TabIndex = 4;
-            // 
-            // lblCashierUsername
-            // 
-            this.lblCashierUsername.AutoSize = true;
-            this.lblCashierUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lblCashierUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashierUsername.ForeColor = System.Drawing.Color.White;
-            this.lblCashierUsername.Location = new System.Drawing.Point(635, 206);
-            this.lblCashierUsername.Name = "lblCashierUsername";
-            this.lblCashierUsername.Size = new System.Drawing.Size(122, 25);
-            this.lblCashierUsername.TabIndex = 6;
-            this.lblCashierUsername.Text = "Username :";
-            // 
-            // lblCashierPassword
-            // 
-            this.lblCashierPassword.AutoSize = true;
-            this.lblCashierPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblCashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashierPassword.ForeColor = System.Drawing.Color.White;
-            this.lblCashierPassword.Location = new System.Drawing.Point(639, 269);
-            this.lblCashierPassword.Name = "lblCashierPassword";
-            this.lblCashierPassword.Size = new System.Drawing.Size(118, 25);
-            this.lblCashierPassword.TabIndex = 7;
-            this.lblCashierPassword.Text = "Password :";
+            this.AdminSignInPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminSignInPanel.BackgroundImage")));
+            this.AdminSignInPanel.Controls.Add(this.btnCashierSignIn);
+            this.AdminSignInPanel.Controls.Add(this.cbCashierShowPassword);
+            this.AdminSignInPanel.Controls.Add(this.tbCashierPassword);
+            this.AdminSignInPanel.Controls.Add(this.tbCashierUserName);
+            this.AdminSignInPanel.Controls.Add(this.lblCashierPassword);
+            this.AdminSignInPanel.Controls.Add(this.lblCashierUserName);
+            this.AdminSignInPanel.Controls.Add(this.lblCashierSignIn);
+            this.AdminSignInPanel.Controls.Add(this.panel1);
+            this.AdminSignInPanel.Location = new System.Drawing.Point(-8, -20);
+            this.AdminSignInPanel.Name = "AdminSignInPanel";
+            this.AdminSignInPanel.Size = new System.Drawing.Size(1200, 700);
+            this.AdminSignInPanel.TabIndex = 2;
             // 
             // btnCashierSignIn
             // 
@@ -110,56 +74,112 @@
             this.btnCashierSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCashierSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashierSignIn.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCashierSignIn.Location = new System.Drawing.Point(826, 369);
+            this.btnCashierSignIn.Location = new System.Drawing.Point(837, 366);
             this.btnCashierSignIn.Name = "btnCashierSignIn";
             this.btnCashierSignIn.Size = new System.Drawing.Size(120, 40);
-            this.btnCashierSignIn.TabIndex = 9;
+            this.btnCashierSignIn.TabIndex = 7;
             this.btnCashierSignIn.Text = "Sign In";
             this.btnCashierSignIn.UseVisualStyleBackColor = false;
-            this.btnCashierSignIn.Click += new System.EventHandler(this.BtnSignIn_Click);
             // 
-            // cbCashierShowPass
+            // cbCashierShowPassword
             // 
-            this.cbCashierShowPass.AutoSize = true;
-            this.cbCashierShowPass.BackColor = System.Drawing.Color.Transparent;
-            this.cbCashierShowPass.ForeColor = System.Drawing.Color.White;
-            this.cbCashierShowPass.Location = new System.Drawing.Point(792, 300);
-            this.cbCashierShowPass.Name = "cbCashierShowPass";
-            this.cbCashierShowPass.Size = new System.Drawing.Size(102, 17);
-            this.cbCashierShowPass.TabIndex = 10;
-            this.cbCashierShowPass.Text = "Show Password";
-            this.cbCashierShowPass.UseVisualStyleBackColor = false;
+            this.cbCashierShowPassword.AutoSize = true;
+            this.cbCashierShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.cbCashierShowPassword.ForeColor = System.Drawing.Color.White;
+            this.cbCashierShowPassword.Location = new System.Drawing.Point(837, 287);
+            this.cbCashierShowPassword.Name = "cbCashierShowPassword";
+            this.cbCashierShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.cbCashierShowPassword.TabIndex = 6;
+            this.cbCashierShowPassword.Text = "Show Password";
+            this.cbCashierShowPassword.UseVisualStyleBackColor = false;
+            // 
+            // tbCashierPassword
+            // 
+            this.tbCashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCashierPassword.Location = new System.Drawing.Point(837, 250);
+            this.tbCashierPassword.Name = "tbCashierPassword";
+            this.tbCashierPassword.PasswordChar = '*';
+            this.tbCashierPassword.Size = new System.Drawing.Size(220, 31);
+            this.tbCashierPassword.TabIndex = 5;
+            // 
+            // tbCashierUserName
+            // 
+            this.tbCashierUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCashierUserName.Location = new System.Drawing.Point(837, 193);
+            this.tbCashierUserName.Name = "tbCashierUserName";
+            this.tbCashierUserName.Size = new System.Drawing.Size(220, 31);
+            this.tbCashierUserName.TabIndex = 4;
+            // 
+            // lblCashierPassword
+            // 
+            this.lblCashierPassword.AutoSize = true;
+            this.lblCashierPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblCashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashierPassword.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCashierPassword.Location = new System.Drawing.Point(703, 250);
+            this.lblCashierPassword.Name = "lblCashierPassword";
+            this.lblCashierPassword.Size = new System.Drawing.Size(102, 24);
+            this.lblCashierPassword.TabIndex = 3;
+            this.lblCashierPassword.Text = "Password :";
+            // 
+            // lblCashierUserName
+            // 
+            this.lblCashierUserName.AutoSize = true;
+            this.lblCashierUserName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCashierUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashierUserName.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCashierUserName.Location = new System.Drawing.Point(698, 193);
+            this.lblCashierUserName.Name = "lblCashierUserName";
+            this.lblCashierUserName.Size = new System.Drawing.Size(107, 24);
+            this.lblCashierUserName.TabIndex = 2;
+            this.lblCashierUserName.Text = "Username :";
+            // 
+            // lblCashierSignIn
+            // 
+            this.lblCashierSignIn.AutoSize = true;
+            this.lblCashierSignIn.BackColor = System.Drawing.Color.Transparent;
+            this.lblCashierSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashierSignIn.ForeColor = System.Drawing.Color.White;
+            this.lblCashierSignIn.Location = new System.Drawing.Point(679, 88);
+            this.lblCashierSignIn.Name = "lblCashierSignIn";
+            this.lblCashierSignIn.Size = new System.Drawing.Size(429, 55);
+            this.lblCashierSignIn.TabIndex = 1;
+            this.lblCashierSignIn.Text = "CASHIER SIGN IN";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::CMS.Properties.Resources.logo;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(590, 700);
+            this.panel1.TabIndex = 0;
             // 
             // CashierSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.cbCashierShowPass);
-            this.Controls.Add(this.btnCashierSignIn);
-            this.Controls.Add(this.lblCashierPassword);
-            this.Controls.Add(this.lblCashierUsername);
-            this.Controls.Add(this.txtCashierUsername);
-            this.Controls.Add(this.lblCashierLogin);
-            this.Controls.Add(this.txtCashierPassword);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.AdminSignInPanel);
+            this.Controls.Add(this.LogoPanel);
             this.Name = "CashierSignIn";
             this.Text = "Form1";
+            this.AdminSignInPanel.ResumeLayout(false);
+            this.AdminSignInPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtCashierPassword;
-        private System.Windows.Forms.Label lblCashierLogin;
-        private System.Windows.Forms.TextBox txtCashierUsername;
-        private System.Windows.Forms.Label lblCashierUsername;
-        private System.Windows.Forms.Label lblCashierPassword;
+        private System.Windows.Forms.Panel LogoPanel;
+        private System.Windows.Forms.Panel AdminSignInPanel;
         private System.Windows.Forms.Button btnCashierSignIn;
-        private System.Windows.Forms.CheckBox cbCashierShowPass;
+        private System.Windows.Forms.CheckBox cbCashierShowPassword;
+        private System.Windows.Forms.TextBox tbCashierPassword;
+        private System.Windows.Forms.TextBox tbCashierUserName;
+        private System.Windows.Forms.Label lblCashierPassword;
+        private System.Windows.Forms.Label lblCashierUserName;
+        private System.Windows.Forms.Label lblCashierSignIn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
