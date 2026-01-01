@@ -64,6 +64,11 @@
     <Compile Include="CashierSignIn.Designer.cs">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="CMSDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaiterRegister.cs">
@@ -100,6 +105,17 @@
     <EmbeddedResource Include="WaiterSignIn.resx">
       <DependentUpon>WaiterSignIn.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CMSDbDataSet.xsc">
+      <DependentUpon>CMSDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CMSDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CMSDbDataSet.xss">
+      <DependentUpon>CMSDbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

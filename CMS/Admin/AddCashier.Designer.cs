@@ -46,6 +46,8 @@
             this.dateTimePickerJD = new System.Windows.Forms.DateTimePicker();
             this.RBMale = new System.Windows.Forms.RadioButton();
             this.RBFemale = new System.Windows.Forms.RadioButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAddCashier
@@ -76,11 +78,11 @@
             this.lblUserName.BackColor = System.Drawing.Color.Transparent;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUserName.Location = new System.Drawing.Point(698, 120);
+            this.lblUserName.Location = new System.Drawing.Point(734, 120);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(107, 24);
+            this.lblUserName.Size = new System.Drawing.Size(71, 24);
             this.lblUserName.TabIndex = 5;
-            this.lblUserName.Text = "Username :";
+            this.lblUserName.Text = "Name :";
             // 
             // lblJoiningDate
             // 
@@ -88,7 +90,7 @@
             this.lblJoiningDate.BackColor = System.Drawing.Color.Transparent;
             this.lblJoiningDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJoiningDate.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblJoiningDate.Location = new System.Drawing.Point(681, 348);
+            this.lblJoiningDate.Location = new System.Drawing.Point(681, 361);
             this.lblJoiningDate.Name = "lblJoiningDate";
             this.lblJoiningDate.Size = new System.Drawing.Size(124, 24);
             this.lblJoiningDate.TabIndex = 8;
@@ -100,11 +102,11 @@
             this.lblDateofBirth.BackColor = System.Drawing.Color.Transparent;
             this.lblDateofBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateofBirth.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDateofBirth.Location = new System.Drawing.Point(690, 304);
+            this.lblDateofBirth.Location = new System.Drawing.Point(685, 319);
             this.lblDateofBirth.Name = "lblDateofBirth";
-            this.lblDateofBirth.Size = new System.Drawing.Size(115, 24);
+            this.lblDateofBirth.Size = new System.Drawing.Size(120, 24);
             this.lblDateofBirth.TabIndex = 9;
-            this.lblDateofBirth.Text = "Date of Birth:";
+            this.lblDateofBirth.Text = "Date of Birth :";
             // 
             // lblGender
             // 
@@ -161,7 +163,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(821, 392);
+            this.textBox2.Location = new System.Drawing.Point(821, 405);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 31);
             this.textBox2.TabIndex = 15;
@@ -169,7 +171,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(821, 439);
+            this.textBox3.Location = new System.Drawing.Point(821, 452);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(220, 31);
             this.textBox3.TabIndex = 16;
@@ -180,7 +182,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPassword.Location = new System.Drawing.Point(703, 392);
+            this.lblPassword.Location = new System.Drawing.Point(703, 405);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(102, 24);
             this.lblPassword.TabIndex = 17;
@@ -192,7 +194,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(633, 439);
+            this.label2.Location = new System.Drawing.Point(633, 452);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 24);
             this.label2.TabIndex = 18;
@@ -201,7 +203,7 @@
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(821, 306);
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(821, 319);
             this.dateTimePickerDOB.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerDOB.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
@@ -211,7 +213,7 @@
             // dateTimePickerJD
             // 
             this.dateTimePickerJD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerJD.Location = new System.Drawing.Point(821, 348);
+            this.dateTimePickerJD.Location = new System.Drawing.Point(821, 361);
             this.dateTimePickerJD.MaxDate = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerJD.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerJD.Name = "dateTimePickerJD";
@@ -246,12 +248,36 @@
             this.RBFemale.Text = "Female";
             this.RBFemale.UseVisualStyleBackColor = false;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(821, 251);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(220, 49);
+            this.richTextBox1.TabIndex = 23;
+            this.richTextBox1.Text = "";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(784, 527);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 40);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Add Cashier";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // AddCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CMS.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.RBFemale);
             this.Controls.Add(this.RBMale);
             this.Controls.Add(this.dateTimePickerJD);
@@ -297,5 +323,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerJD;
         private System.Windows.Forms.RadioButton RBMale;
         private System.Windows.Forms.RadioButton RBFemale;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
