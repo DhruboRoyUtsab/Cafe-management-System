@@ -5,16 +5,6 @@ VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS", "CMS\CMS.csproj", "{1F5736BD-37B0-47F7-90FB-9962B3C531AA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-	ProjectSection(SolutionItems) = preProject
-		CMS\AddCashier.cs = CMS\AddCashier.cs
-		CMS\AddCashier.Designer.cs = CMS\AddCashier.Designer.cs
-		CMS\AddCashier.resx = CMS\AddCashier.resx
-		CMS\AdminSignIn.cs = CMS\AdminSignIn.cs
-		CMS\AdminSignIn.Designer.cs = CMS\AdminSignIn.Designer.cs
-		CMS\AdminSignIn.resx = CMS\AdminSignIn.resx
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
