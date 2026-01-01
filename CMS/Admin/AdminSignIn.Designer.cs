@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSignIn));
             this.AdminSignInPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnAdminSIgnIn = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TBAdminPassword = new System.Windows.Forms.TextBox();
+            this.TBAdminUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,10 +71,10 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnAdminSIgnIn);
             this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.TBAdminPassword);
+            this.panel1.Controls.Add(this.TBAdminUsername);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
@@ -84,19 +84,20 @@
             this.panel1.Size = new System.Drawing.Size(1200, 700);
             this.panel1.TabIndex = 8;
             // 
-            // button1
+            // BtnAdminSIgnIn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(793, 346);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Sign In";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnAdminSIgnIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnAdminSIgnIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnAdminSIgnIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdminSIgnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdminSIgnIn.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnAdminSIgnIn.Location = new System.Drawing.Point(793, 346);
+            this.BtnAdminSIgnIn.Name = "BtnAdminSIgnIn";
+            this.BtnAdminSIgnIn.Size = new System.Drawing.Size(120, 40);
+            this.BtnAdminSIgnIn.TabIndex = 7;
+            this.BtnAdminSIgnIn.Text = "Sign In";
+            this.BtnAdminSIgnIn.UseVisualStyleBackColor = false;
+            this.BtnAdminSIgnIn.Click += new System.EventHandler(this.BtnAdminSIgnIn_Click);
             // 
             // checkBox1
             // 
@@ -110,22 +111,22 @@
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // TBAdminPassword
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(772, 238);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(220, 31);
-            this.textBox1.TabIndex = 5;
+            this.TBAdminPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBAdminPassword.Location = new System.Drawing.Point(772, 238);
+            this.TBAdminPassword.Name = "TBAdminPassword";
+            this.TBAdminPassword.PasswordChar = '*';
+            this.TBAdminPassword.Size = new System.Drawing.Size(220, 31);
+            this.TBAdminPassword.TabIndex = 5;
             // 
-            // textBox2
+            // TBAdminUsername
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(772, 170);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 31);
-            this.textBox2.TabIndex = 4;
+            this.TBAdminUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBAdminUsername.Location = new System.Drawing.Point(772, 170);
+            this.TBAdminUsername.Name = "TBAdminUsername";
+            this.TBAdminUsername.Size = new System.Drawing.Size(220, 31);
+            this.TBAdminUsername.TabIndex = 4;
             // 
             // label1
             // 
@@ -171,6 +172,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(590, 700);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // BtnSignIn
             // 
@@ -290,10 +292,10 @@
         private System.Windows.Forms.Button BtnSignIn;
         private System.Windows.Forms.CheckBox ShowPassword;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnAdminSIgnIn;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TBAdminPassword;
+        private System.Windows.Forms.TextBox TBAdminUsername;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

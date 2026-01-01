@@ -36,8 +36,8 @@
             this.lblGender = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.TBUserName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBACashierUserName = new System.Windows.Forms.TextBox();
+            this.TBACashierPassword = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -144,21 +144,21 @@
             this.lblEmail.TabIndex = 12;
             this.lblEmail.Text = "Email :";
             // 
-            // TBUserName
+            // TBACashierUserName
             // 
-            this.TBUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBUserName.Location = new System.Drawing.Point(821, 120);
-            this.TBUserName.Name = "TBUserName";
-            this.TBUserName.Size = new System.Drawing.Size(220, 31);
-            this.TBUserName.TabIndex = 13;
+            this.TBACashierUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBACashierUserName.Location = new System.Drawing.Point(821, 120);
+            this.TBACashierUserName.Name = "TBACashierUserName";
+            this.TBACashierUserName.Size = new System.Drawing.Size(220, 31);
+            this.TBACashierUserName.TabIndex = 13;
             // 
-            // textBox1
+            // TBACashierPassword
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(821, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 31);
-            this.textBox1.TabIndex = 14;
+            this.TBACashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBACashierPassword.Location = new System.Drawing.Point(821, 164);
+            this.TBACashierPassword.Name = "TBACashierPassword";
+            this.TBACashierPassword.Size = new System.Drawing.Size(220, 31);
+            this.TBACashierPassword.TabIndex = 14;
             // 
             // textBox2
             // 
@@ -286,8 +286,8 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.TBUserName);
+            this.Controls.Add(this.TBACashierPassword);
+            this.Controls.Add(this.TBACashierUserName);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblGender);
@@ -298,6 +298,7 @@
             this.Controls.Add(this.lblAddCashier);
             this.Name = "AddCashier";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AddCashier_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,8 +314,8 @@
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox TBUserName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBACashierUserName;
+        private System.Windows.Forms.TextBox TBACashierPassword;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblPassword;

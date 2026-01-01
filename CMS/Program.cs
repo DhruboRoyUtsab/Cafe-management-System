@@ -17,7 +17,7 @@ namespace CMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AdminSignIn());
-            Application.Run(new WaiterSignIn());
+            //Application.Run(new WaiterSignIn());
         }
     }
 }
