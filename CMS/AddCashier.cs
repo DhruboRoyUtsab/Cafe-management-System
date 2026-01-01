@@ -16,5 +16,10 @@ namespace CMS
         {
             InitializeComponent();
         }
+
+        private void lblSignIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
