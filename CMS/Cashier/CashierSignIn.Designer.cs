@@ -92,6 +92,7 @@
             this.cbCashierShowPassword.TabIndex = 6;
             this.cbCashierShowPassword.Text = "Show Password";
             this.cbCashierShowPassword.UseVisualStyleBackColor = false;
+            this.cbCashierShowPassword.CheckedChanged += new System.EventHandler(this.cbCashierShowPassword_CheckedChanged);
             // 
             // tbCashierPassword
             // 

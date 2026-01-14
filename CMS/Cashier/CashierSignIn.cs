@@ -16,5 +16,10 @@ namespace CMS
         {
             InitializeComponent();
         }
+
+        private void cbCashierShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

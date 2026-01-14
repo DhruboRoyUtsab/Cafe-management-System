@@ -58,10 +58,10 @@
     <Compile Include="Admin\AdminSignIn.Designer.cs">
       <DependentUpon>AdminSignIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashierSignIn.cs">
+    <Compile Include="Cashier\CashierSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashierSignIn.Designer.cs">
+    <Compile Include="Cashier\CashierSignIn.Designer.cs">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="CMSDbDataSet.Designer.cs">
@@ -89,7 +89,7 @@
     <EmbeddedResource Include="Admin\AdminSignIn.resx">
       <DependentUpon>AdminSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashierSignIn.resx">
+    <EmbeddedResource Include="Cashier\CashierSignIn.resx">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
