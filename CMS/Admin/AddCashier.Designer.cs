@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblAddCashier = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblJoiningDate = new System.Windows.Forms.Label();
             this.lblDateofBirth = new System.Windows.Forms.Label();
@@ -37,17 +36,20 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.TBACashierUserName = new System.Windows.Forms.TextBox();
+            this.TBACashierEmail = new System.Windows.Forms.TextBox();
             this.TBACashierPassword = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TBACashierConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerJD = new System.Windows.Forms.DateTimePicker();
             this.RBMale = new System.Windows.Forms.RadioButton();
             this.RBFemale = new System.Windows.Forms.RadioButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TBACashierAddress = new System.Windows.Forms.RichTextBox();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.ShowBtn = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAddCashier
@@ -62,15 +64,6 @@
             this.lblAddCashier.TabIndex = 2;
             this.lblAddCashier.Text = "ADD CASHIER";
             this.lblAddCashier.Click += new System.EventHandler(this.lblSignIn_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::CMS.Properties.Resources.logo;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 661);
-            this.panel1.TabIndex = 3;
             // 
             // lblUserName
             // 
@@ -152,29 +145,29 @@
             this.TBACashierUserName.Size = new System.Drawing.Size(220, 31);
             this.TBACashierUserName.TabIndex = 13;
             // 
+            // TBACashierEmail
+            // 
+            this.TBACashierEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBACashierEmail.Location = new System.Drawing.Point(821, 164);
+            this.TBACashierEmail.Name = "TBACashierEmail";
+            this.TBACashierEmail.Size = new System.Drawing.Size(220, 31);
+            this.TBACashierEmail.TabIndex = 14;
+            // 
             // TBACashierPassword
             // 
             this.TBACashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBACashierPassword.Location = new System.Drawing.Point(821, 164);
+            this.TBACashierPassword.Location = new System.Drawing.Point(821, 405);
             this.TBACashierPassword.Name = "TBACashierPassword";
             this.TBACashierPassword.Size = new System.Drawing.Size(220, 31);
-            this.TBACashierPassword.TabIndex = 14;
+            this.TBACashierPassword.TabIndex = 15;
             // 
-            // textBox2
+            // TBACashierConfirmPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(821, 405);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(220, 31);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(821, 452);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(220, 31);
-            this.textBox3.TabIndex = 16;
+            this.TBACashierConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBACashierConfirmPassword.Location = new System.Drawing.Point(821, 452);
+            this.TBACashierConfirmPassword.Name = "TBACashierConfirmPassword";
+            this.TBACashierConfirmPassword.Size = new System.Drawing.Size(220, 31);
+            this.TBACashierConfirmPassword.TabIndex = 16;
             // 
             // lblPassword
             // 
@@ -248,27 +241,52 @@
             this.RBFemale.Text = "Female";
             this.RBFemale.UseVisualStyleBackColor = false;
             // 
-            // richTextBox1
+            // TBACashierAddress
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(821, 251);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(220, 49);
-            this.richTextBox1.TabIndex = 23;
-            this.richTextBox1.Text = "";
+            this.TBACashierAddress.Location = new System.Drawing.Point(821, 251);
+            this.TBACashierAddress.Name = "TBACashierAddress";
+            this.TBACashierAddress.Size = new System.Drawing.Size(220, 49);
+            this.TBACashierAddress.TabIndex = 23;
+            this.TBACashierAddress.Text = "";
             // 
-            // button2
+            // AddBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(784, 527);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 40);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Add Cashier";
-            this.button2.UseVisualStyleBackColor = false;
+            this.AddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AddBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.AddBtn.Location = new System.Drawing.Point(955, 535);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(180, 40);
+            this.AddBtn.TabIndex = 25;
+            this.AddBtn.Text = "Add Cashier";
+            this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // ShowBtn
+            // 
+            this.ShowBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ShowBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowBtn.Location = new System.Drawing.Point(649, 535);
+            this.ShowBtn.Name = "ShowBtn";
+            this.ShowBtn.Size = new System.Drawing.Size(100, 40);
+            this.ShowBtn.TabIndex = 26;
+            this.ShowBtn.Text = "Show";
+            this.ShowBtn.UseVisualStyleBackColor = false;
+            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
+            // 
+            // dataGridView
+            // 
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 120);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(600, 400);
+            this.dataGridView.TabIndex = 27;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // AddCashier
             // 
@@ -276,17 +294,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CMS.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1184, 661);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.ShowBtn);
+            this.Controls.Add(this.AddBtn);
+            this.Controls.Add(this.TBACashierAddress);
             this.Controls.Add(this.RBFemale);
             this.Controls.Add(this.RBMale);
             this.Controls.Add(this.dateTimePickerJD);
             this.Controls.Add(this.dateTimePickerDOB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TBACashierConfirmPassword);
             this.Controls.Add(this.TBACashierPassword);
+            this.Controls.Add(this.TBACashierEmail);
             this.Controls.Add(this.TBACashierUserName);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblAddress);
@@ -294,11 +314,11 @@
             this.Controls.Add(this.lblDateofBirth);
             this.Controls.Add(this.lblJoiningDate);
             this.Controls.Add(this.lblUserName);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblAddCashier);
             this.Name = "AddCashier";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AddCashier_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,7 +327,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblAddCashier;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblJoiningDate;
         private System.Windows.Forms.Label lblDateofBirth;
@@ -315,16 +334,18 @@
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox TBACashierUserName;
+        private System.Windows.Forms.TextBox TBACashierEmail;
         private System.Windows.Forms.TextBox TBACashierPassword;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TBACashierConfirmPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
         private System.Windows.Forms.DateTimePicker dateTimePickerJD;
         private System.Windows.Forms.RadioButton RBMale;
         private System.Windows.Forms.RadioButton RBFemale;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox TBACashierAddress;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button ShowBtn;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }
