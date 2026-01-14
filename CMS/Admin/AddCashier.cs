@@ -46,6 +46,16 @@ namespace CMS
             conn.Close();
         }
 
+        private void Insert()
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
+            conn.Open();
+            string query = "insert into AddCashier (Name,Email,Address,DateOfBirth,Gender,JoiningDate,Password) values('" + name + "','" + email + "','" + address + "','" + DTPickerDOB.ToString("yyyy-MM-dd") + "','" + gender + "','" + JDPickerDOB.ToString("yyyy-MM-dd") + "','" + password + "')";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
         private void lblSignIn_Click(object sender, EventArgs e)
         {
 
@@ -74,7 +84,7 @@ namespace CMS
                 gender = "Female";
             }
 
-
+            Insert();
             Show();
             MessageBox.Show("Cashier Added Successfully!");
         }
