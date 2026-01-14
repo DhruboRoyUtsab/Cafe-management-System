@@ -64,6 +64,12 @@
     <Compile Include="Cashier\CashierSignIn.Designer.cs">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashier\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="CMSDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\CashierSignIn.resx">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,8 +139,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\atm-card.png" />
     <Content Include="Assets\bg.png" />
+    <Content Include="Assets\card.png" />
+    <Content Include="Assets\dollars %281%29.png" />
+    <Content Include="Assets\dollars.png" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\visa %281%29.png" />
+    <Content Include="Assets\visa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
