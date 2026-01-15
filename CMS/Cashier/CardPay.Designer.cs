@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardPay));
             this.PaymentPanel = new System.Windows.Forms.Panel();
+            this.btnCardPayUpdate = new System.Windows.Forms.Button();
+            this.tbPin = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tbCard = new System.Windows.Forms.TextBox();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -39,12 +43,11 @@
             this.btnCardPayNext = new System.Windows.Forms.Button();
             this.lblCardPayment = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbPin = new System.Windows.Forms.TextBox();
-            this.gvCard = new System.Windows.Forms.DataGridView();
             this.btnCardPayShow = new System.Windows.Forms.Button();
-            this.btnCardPayUpdate = new System.Windows.Forms.Button();
+            this.gvCard = new System.Windows.Forms.DataGridView();
+            this.lblOrderId = new System.Windows.Forms.Label();
+            this.tbOrderIdCard = new System.Windows.Forms.TextBox();
+            this.btnCardPayBack = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCard)).BeginInit();
@@ -53,7 +56,9 @@
             // PaymentPanel
             // 
             this.PaymentPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PaymentPanel.BackgroundImage")));
-            this.PaymentPanel.Controls.Add(this.btnCardPayUpdate);
+            this.PaymentPanel.Controls.Add(this.btnCardPayBack);
+            this.PaymentPanel.Controls.Add(this.tbOrderIdCard);
+            this.PaymentPanel.Controls.Add(this.lblOrderId);
             this.PaymentPanel.Controls.Add(this.tbPin);
             this.PaymentPanel.Controls.Add(this.label3);
             this.PaymentPanel.Controls.Add(this.panel3);
@@ -70,6 +75,49 @@
             this.PaymentPanel.Name = "PaymentPanel";
             this.PaymentPanel.Size = new System.Drawing.Size(1200, 700);
             this.PaymentPanel.TabIndex = 5;
+            // 
+            // btnCardPayUpdate
+            // 
+            this.btnCardPayUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCardPayUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCardPayUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardPayUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCardPayUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCardPayUpdate.Location = new System.Drawing.Point(414, 596);
+            this.btnCardPayUpdate.Name = "btnCardPayUpdate";
+            this.btnCardPayUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnCardPayUpdate.TabIndex = 22;
+            this.btnCardPayUpdate.Text = "Update";
+            this.btnCardPayUpdate.UseVisualStyleBackColor = false;
+            // 
+            // tbPin
+            // 
+            this.tbPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPin.Location = new System.Drawing.Point(766, 382);
+            this.tbPin.Name = "tbPin";
+            this.tbPin.Size = new System.Drawing.Size(220, 31);
+            this.tbPin.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(609, 382);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 24);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Pin Number :";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.Location = new System.Drawing.Point(630, 86);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(69, 52);
+            this.panel3.TabIndex = 19;
             // 
             // tbCard
             // 
@@ -138,7 +186,7 @@
             this.btnCardPayNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCardPayNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCardPayNext.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCardPayNext.Location = new System.Drawing.Point(715, 527);
+            this.btnCardPayNext.Location = new System.Drawing.Point(694, 527);
             this.btnCardPayNext.Name = "btnCardPayNext";
             this.btnCardPayNext.Size = new System.Drawing.Size(120, 40);
             this.btnCardPayNext.TabIndex = 7;
@@ -162,49 +210,12 @@
             this.panel1.BackgroundImage = global::CMS.Properties.Resources.logo;
             this.panel1.Controls.Add(this.btnCardPayShow);
             this.panel1.Controls.Add(this.gvCard);
+            this.panel1.Controls.Add(this.btnCardPayUpdate);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(590, 700);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Location = new System.Drawing.Point(630, 86);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(69, 52);
-            this.panel3.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(609, 382);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 24);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Pin Number :";
-            // 
-            // tbPin
-            // 
-            this.tbPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPin.Location = new System.Drawing.Point(766, 382);
-            this.tbPin.Name = "tbPin";
-            this.tbPin.Size = new System.Drawing.Size(220, 31);
-            this.tbPin.TabIndex = 21;
-            // 
-            // gvCard
-            // 
-            this.gvCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvCard.Location = new System.Drawing.Point(44, 127);
-            this.gvCard.Name = "gvCard";
-            this.gvCard.Size = new System.Drawing.Size(490, 440);
-            this.gvCard.TabIndex = 0;
-            this.gvCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnCardPayShow
             // 
@@ -220,19 +231,49 @@
             this.btnCardPayShow.Text = "Show";
             this.btnCardPayShow.UseVisualStyleBackColor = false;
             // 
-            // btnCardPayUpdate
+            // gvCard
             // 
-            this.btnCardPayUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCardPayUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCardPayUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCardPayUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCardPayUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCardPayUpdate.Location = new System.Drawing.Point(948, 527);
-            this.btnCardPayUpdate.Name = "btnCardPayUpdate";
-            this.btnCardPayUpdate.Size = new System.Drawing.Size(120, 40);
-            this.btnCardPayUpdate.TabIndex = 22;
-            this.btnCardPayUpdate.Text = "Update";
-            this.btnCardPayUpdate.UseVisualStyleBackColor = false;
+            this.gvCard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvCard.Location = new System.Drawing.Point(44, 127);
+            this.gvCard.Name = "gvCard";
+            this.gvCard.Size = new System.Drawing.Size(490, 440);
+            this.gvCard.TabIndex = 0;
+            this.gvCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // lblOrderId
+            // 
+            this.lblOrderId.AutoSize = true;
+            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
+            this.lblOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderId.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblOrderId.Location = new System.Drawing.Point(639, 197);
+            this.lblOrderId.Name = "lblOrderId";
+            this.lblOrderId.Size = new System.Drawing.Size(91, 24);
+            this.lblOrderId.TabIndex = 23;
+            this.lblOrderId.Text = "Order ID :";
+            this.lblOrderId.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // tbOrderIdCard
+            // 
+            this.tbOrderIdCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOrderIdCard.Location = new System.Drawing.Point(766, 197);
+            this.tbOrderIdCard.Name = "tbOrderIdCard";
+            this.tbOrderIdCard.Size = new System.Drawing.Size(220, 31);
+            this.tbOrderIdCard.TabIndex = 24;
+            // 
+            // btnCardPayBack
+            // 
+            this.btnCardPayBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCardPayBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCardPayBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardPayBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCardPayBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCardPayBack.Location = new System.Drawing.Point(978, 527);
+            this.btnCardPayBack.Name = "btnCardPayBack";
+            this.btnCardPayBack.Size = new System.Drawing.Size(120, 40);
+            this.btnCardPayBack.TabIndex = 25;
+            this.btnCardPayBack.Text = "Back";
+            this.btnCardPayBack.UseVisualStyleBackColor = false;
             // 
             // CardPay
             // 
@@ -268,5 +309,8 @@
         private System.Windows.Forms.DataGridView gvCard;
         private System.Windows.Forms.Button btnCardPayUpdate;
         private System.Windows.Forms.Button btnCardPayShow;
+        private System.Windows.Forms.TextBox tbOrderIdCard;
+        private System.Windows.Forms.Label lblOrderId;
+        private System.Windows.Forms.Button btnCardPayBack;
     }
 }

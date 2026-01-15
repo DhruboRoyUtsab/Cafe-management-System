@@ -30,25 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payment));
             this.PaymentPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rbtnVisa = new System.Windows.Forms.RadioButton();
             this.rbtnCardPay = new System.Windows.Forms.RadioButton();
             this.rbtnCashPay = new System.Windows.Forms.RadioButton();
             this.btnPaymentNext = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPaymentBack = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PaymentPanel
             // 
             this.PaymentPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PaymentPanel.BackgroundImage")));
-            this.PaymentPanel.Controls.Add(this.panel4);
+            this.PaymentPanel.Controls.Add(this.btnPaymentBack);
             this.PaymentPanel.Controls.Add(this.panel3);
             this.PaymentPanel.Controls.Add(this.panel2);
-            this.PaymentPanel.Controls.Add(this.rbtnVisa);
             this.PaymentPanel.Controls.Add(this.rbtnCardPay);
             this.PaymentPanel.Controls.Add(this.rbtnCashPay);
             this.PaymentPanel.Controls.Add(this.btnPaymentNext);
@@ -59,20 +57,11 @@
             this.PaymentPanel.Size = new System.Drawing.Size(1200, 700);
             this.PaymentPanel.TabIndex = 3;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.Location = new System.Drawing.Point(734, 386);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(69, 52);
-            this.panel4.TabIndex = 13;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.Location = new System.Drawing.Point(734, 314);
+            this.panel3.Location = new System.Drawing.Point(734, 348);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(69, 52);
             this.panel3.TabIndex = 13;
@@ -86,21 +75,10 @@
             this.panel2.Size = new System.Drawing.Size(69, 52);
             this.panel2.TabIndex = 12;
             // 
-            // rbtnVisa
-            // 
-            this.rbtnVisa.AutoSize = true;
-            this.rbtnVisa.Location = new System.Drawing.Point(686, 400);
-            this.rbtnVisa.Name = "rbtnVisa";
-            this.rbtnVisa.Size = new System.Drawing.Size(14, 13);
-            this.rbtnVisa.TabIndex = 11;
-            this.rbtnVisa.TabStop = true;
-            this.rbtnVisa.UseVisualStyleBackColor = true;
-            this.rbtnVisa.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
-            // 
             // rbtnCardPay
             // 
             this.rbtnCardPay.AutoSize = true;
-            this.rbtnCardPay.Location = new System.Drawing.Point(686, 332);
+            this.rbtnCardPay.Location = new System.Drawing.Point(686, 369);
             this.rbtnCardPay.Name = "rbtnCardPay";
             this.rbtnCardPay.Size = new System.Drawing.Size(14, 13);
             this.rbtnCardPay.TabIndex = 9;
@@ -124,7 +102,7 @@
             this.btnPaymentNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaymentNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymentNext.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPaymentNext.Location = new System.Drawing.Point(837, 537);
+            this.btnPaymentNext.Location = new System.Drawing.Point(683, 547);
             this.btnPaymentNext.Name = "btnPaymentNext";
             this.btnPaymentNext.Size = new System.Drawing.Size(120, 40);
             this.btnPaymentNext.TabIndex = 7;
@@ -153,6 +131,20 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnPaymentBack
+            // 
+            this.btnPaymentBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPaymentBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPaymentBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaymentBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPaymentBack.Location = new System.Drawing.Point(984, 547);
+            this.btnPaymentBack.Name = "btnPaymentBack";
+            this.btnPaymentBack.Size = new System.Drawing.Size(120, 40);
+            this.btnPaymentBack.TabIndex = 14;
+            this.btnPaymentBack.Text = "Back";
+            this.btnPaymentBack.UseVisualStyleBackColor = false;
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,11 +165,10 @@
         private System.Windows.Forms.Button btnPaymentNext;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton rbtnVisa;
         private System.Windows.Forms.RadioButton rbtnCardPay;
         private System.Windows.Forms.RadioButton rbtnCashPay;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnPaymentBack;
     }
 }
