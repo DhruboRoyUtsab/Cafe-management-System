@@ -9,7 +9,7 @@ namespace CMS
     public partial class AddCashier : Form
     {
         string name, email, password, address, gender;
-        DateTime DTPickerDOB, JDPickerDOB;
+        DateTime DTPickerDOB;
         int selectedCashierId;
         public AddCashier()
         {
@@ -209,25 +209,25 @@ namespace CMS
         private void LoadRowToForm(DataGridViewCellEventArgs e)
         {
             try
-    {
-        if (e.RowIndex < 0) return;
+            {
+                if (e.RowIndex < 0) return;
 
-        selectedCashierId = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells[0].Value);
-        TBACashierUserName.Text = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-        TBACashierEmail.Text = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                selectedCashierId = Convert.ToInt32(dataGridView.Rows[e.RowIndex].Cells[0].Value);
+                TBACashierUserName.Text = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                TBACashierEmail.Text = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
 
-        string g = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-        RBMale.Checked = g == "Male";
-        RBFemale.Checked = g == "Female";
+                string g = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                RBMale.Checked = g == "Male";
+                RBFemale.Checked = g == "Female";
 
-        TBACashierAddress.Text = dataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
-        TBACashierPassword.Text = dataGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
+                TBACashierAddress.Text = dataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+                TBACashierPassword.Text = dataGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
 
-        DateTime dob;
-        if (DateTime.TryParse(dataGridView.Rows[e.RowIndex].Cells[5].Value.ToString(), out dob))
-            dateTimePickerDOB.Value = dob;
-    }
-    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                DateTime dob;
+                if (DateTime.TryParse(dataGridView.Rows[e.RowIndex].Cells[5].Value.ToString(), out dob))
+                    dateTimePickerDOB.Value = dob;
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
     }
