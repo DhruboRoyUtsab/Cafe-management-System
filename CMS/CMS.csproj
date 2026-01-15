@@ -64,11 +64,35 @@
     <Compile Include="Admin\AdminSignIn.Designer.cs">
       <DependentUpon>AdminSignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashier\CardPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\CardPay.Designer.cs">
+      <DependentUpon>CardPay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashier\CashierSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cashier\CashierSignIn.Designer.cs">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\CashPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\CashPay.Designer.cs">
+      <DependentUpon>CashPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier\PaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\PaymentHistory.Designer.cs">
+      <DependentUpon>PaymentHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="CMSDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,8 +122,20 @@
     <EmbeddedResource Include="Admin\AdminSignIn.resx">
       <DependentUpon>AdminSignIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\CardPay.resx">
+      <DependentUpon>CardPay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashier\CashierSignIn.resx">
       <DependentUpon>CashierSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\CashPay.resx">
+      <DependentUpon>CashPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\PaymentHistory.resx">
+      <DependentUpon>PaymentHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,8 +175,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\atm-card.png" />
     <Content Include="Assets\bg.png" />
+    <Content Include="Assets\card.png" />
+    <Content Include="Assets\dollars %281%29.png" />
+    <Content Include="Assets\dollars.png" />
     <Content Include="Assets\logo.png" />
+    <Content Include="Assets\visa %281%29.png" />
+    <Content Include="Assets\visa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

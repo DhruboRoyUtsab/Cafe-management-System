@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierSignIn));
-            this.LogoPanel = new System.Windows.Forms.Panel();
             this.AdminSignInPanel = new System.Windows.Forms.Panel();
             this.btnCashierSignIn = new System.Windows.Forms.Button();
             this.cbCashierShowPassword = new System.Windows.Forms.CheckBox();
@@ -39,17 +38,9 @@
             this.lblCashierUserName = new System.Windows.Forms.Label();
             this.lblCashierSignIn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LogoPanel = new System.Windows.Forms.Panel();
             this.AdminSignInPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LogoPanel
-            // 
-            this.LogoPanel.BackgroundImage = global::CMS.Properties.Resources.logo;
-            this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
-            this.LogoPanel.Name = "LogoPanel";
-            this.LogoPanel.Size = new System.Drawing.Size(590, 661);
-            this.LogoPanel.TabIndex = 1;
             // 
             // AdminSignInPanel
             // 
@@ -155,6 +146,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(590, 700);
             this.panel1.TabIndex = 0;
+            // 
+            // LogoPanel
+            // 
+            this.LogoPanel.BackgroundImage = global::CMS.Properties.Resources.logo;
+            this.LogoPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LogoPanel.Location = new System.Drawing.Point(0, 0);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(590, 661);
+            this.LogoPanel.TabIndex = 1;
             // 
             // CashierSignIn
             // 

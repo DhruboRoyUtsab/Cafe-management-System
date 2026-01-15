@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.Cashier;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,8 +17,9 @@ namespace CMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AdminSignIn());
-            Application.Run(new AddCashier());
+            Application.Run(new AdminSignIn());
+            Application.Run(new Payment());
+
             //Application.Run(new WaiterSignIn());
         }
     }
