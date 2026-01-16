@@ -40,8 +40,37 @@ namespace CMS.Cashier
 
         }
 
+        private new void Show(string query, DataGridView grid)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(
+                    @"Data Source=UTSAB-PC\SQLEXPRESS;
+              Initial Catalog=CMSDb;
+              Integrated Security=True;
+              Encrypt=True;
+              TrustServerCertificate=True;");
+
+                conn.Open();
+                SqlDataAdapter adp = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+                grid.AutoGenerateColumns = true;
+                grid.DataSource = dt;
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
         private void btnPaymentHistoryShow_Click(object sender, EventArgs e)
         {
+
             SqlConnection conn = new SqlConnection(
             @"Data Source=UTSAB-PC\SQLEXPRESS;
           Initial Catalog=CMSDb;
@@ -57,17 +86,12 @@ namespace CMS.Cashier
             p.PaymentAmount,
             ISNULL(p.PaymentMethod, 'Not Paid') AS PaymentMethod,
             p.PaymentStatus
-        FROM Table_1 p
+        FROM PaymentHistory p
         INNER JOIN Orders o ON p.OrderID = o.OrderId
         ORDER BY o.OrderId DESC
     ";
 
-            SqlDataAdapter adp = new SqlDataAdapter(query, conn);
-            DataTable dt = new DataTable();
-            adp.Fill(dt);
-
-            gvAllPay.AutoGenerateColumns = true;
-            gvAllPay.DataSource = dt;
+            Show(query, gvAllPay);
         }
 
         private void gvAllPay_CellContentClick(object sender, DataGridViewCellEventArgs e)
