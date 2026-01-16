@@ -145,6 +145,11 @@ namespace CMS.Admin
             this.Hide();
         }
 
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LoadRowToForm(e);
+        }
+
         private void ClearBtn_Click(object sender, EventArgs e)
         {
 

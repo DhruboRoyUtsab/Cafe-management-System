@@ -87,6 +87,7 @@
             // 
             // gvAllPay
             // 
+            this.gvAllPay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvAllPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvAllPay.Location = new System.Drawing.Point(142, 127);
             this.gvAllPay.MultiSelect = false;

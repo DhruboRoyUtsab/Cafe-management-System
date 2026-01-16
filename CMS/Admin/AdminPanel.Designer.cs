@@ -119,6 +119,7 @@
             this.Controls.Add(this.CBtn);
             this.Controls.Add(this.lblAdminPanel);
             this.Name = "AdminPanel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPanel";
             this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.ResumeLayout(false);

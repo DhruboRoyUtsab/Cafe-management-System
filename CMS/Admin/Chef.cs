@@ -37,7 +37,7 @@ namespace CMS.Admin
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            LoadRowToForm(e);
+            
         }
         
         private void LoadRowToForm(DataGridViewCellEventArgs e)
@@ -162,6 +162,11 @@ namespace CMS.Admin
             AdminPanel ad = new AdminPanel();
             ad.Show();
             this.Hide();
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LoadRowToForm(e);
         }
 
         private new void Update()

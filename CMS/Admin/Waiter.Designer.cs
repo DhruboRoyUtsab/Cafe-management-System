@@ -103,10 +103,12 @@
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(78, 136);
+            this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(600, 400);
             this.dataGridView.TabIndex = 49;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // ShowBtn
             // 
@@ -213,6 +215,7 @@
             this.TBACashierConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBACashierConfirmPassword.Location = new System.Drawing.Point(887, 431);
             this.TBACashierConfirmPassword.Name = "TBACashierConfirmPassword";
+            this.TBACashierConfirmPassword.PasswordChar = '*';
             this.TBACashierConfirmPassword.Size = new System.Drawing.Size(220, 31);
             this.TBACashierConfirmPassword.TabIndex = 40;
             // 
@@ -221,6 +224,7 @@
             this.TBACashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBACashierPassword.Location = new System.Drawing.Point(887, 384);
             this.TBACashierPassword.Name = "TBACashierPassword";
+            this.TBACashierPassword.PasswordChar = '*';
             this.TBACashierPassword.Size = new System.Drawing.Size(220, 31);
             this.TBACashierPassword.TabIndex = 39;
             // 
@@ -358,6 +362,7 @@
             this.Controls.Add(this.lblWaiter);
             this.Name = "Waiter";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Waiter";
             this.Load += new System.EventHandler(this.Waiter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

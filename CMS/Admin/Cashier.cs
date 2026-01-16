@@ -152,6 +152,7 @@ namespace CMS
             RBMale.Checked = false;
             RBFemale.Checked = false;
             selectedCashierId = 0;
+            TBACashierConfirmPassword.Clear();
         }
 
         private void lblSignIn_Click(object sender, EventArgs e)
@@ -164,6 +165,11 @@ namespace CMS
             AdminPanel ad = new AdminPanel();
             ad.Show();
             this.Hide();
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LoadRowToForm(e);
         }
 
         private void AddCashier_Load(object sender, EventArgs e)
@@ -212,7 +218,7 @@ namespace CMS
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            LoadRowToForm(e);
+            
         }
         private void LoadRowToForm(DataGridViewCellEventArgs e)
         {

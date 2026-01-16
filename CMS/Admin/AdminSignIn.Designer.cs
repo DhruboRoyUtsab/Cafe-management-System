@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSignIn));
             this.AdminSignInPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BckBtn = new System.Windows.Forms.Button();
             this.BtnAdminSIgnIn = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.TBAdminPassword = new System.Windows.Forms.TextBox();
             this.TBAdminUsername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblSignIn = new System.Windows.Forms.Label();
             this.LogoPanel = new System.Windows.Forms.Panel();
-            this.BckBtn = new System.Windows.Forms.Button();
             this.AdminSignInPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +73,6 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.BckBtn);
             this.panel1.Controls.Add(this.BtnAdminSIgnIn);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.TBAdminPassword);
             this.panel1.Controls.Add(this.TBAdminUsername);
             this.panel1.Controls.Add(this.label1);
@@ -85,6 +83,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 700);
             this.panel1.TabIndex = 8;
+            // 
+            // BckBtn
+            // 
+            this.BckBtn.BackColor = System.Drawing.Color.Gray;
+            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.BckBtn.Location = new System.Drawing.Point(805, 511);
+            this.BckBtn.Name = "BckBtn";
+            this.BckBtn.Size = new System.Drawing.Size(100, 35);
+            this.BckBtn.TabIndex = 54;
+            this.BckBtn.Text = "Back";
+            this.BckBtn.UseVisualStyleBackColor = false;
+            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
             // 
             // BtnAdminSIgnIn
             // 
@@ -100,18 +113,6 @@
             this.BtnAdminSIgnIn.Text = "Sign In";
             this.BtnAdminSIgnIn.UseVisualStyleBackColor = false;
             this.BtnAdminSIgnIn.Click += new System.EventHandler(this.BtnAdminSIgnIn_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(772, 275);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Show Password";
-            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // TBAdminPassword
             // 
@@ -267,21 +268,6 @@
             this.LogoPanel.Size = new System.Drawing.Size(590, 700);
             this.LogoPanel.TabIndex = 0;
             // 
-            // BckBtn
-            // 
-            this.BckBtn.BackColor = System.Drawing.Color.Gray;
-            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.BckBtn.Location = new System.Drawing.Point(805, 511);
-            this.BckBtn.Name = "BckBtn";
-            this.BckBtn.Size = new System.Drawing.Size(100, 35);
-            this.BckBtn.TabIndex = 54;
-            this.BckBtn.Text = "Back";
-            this.BckBtn.UseVisualStyleBackColor = false;
-            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
-            // 
             // AdminSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +275,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.AdminSignInPanel);
             this.Name = "AdminSignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Sign In";
             this.AdminSignInPanel.ResumeLayout(false);
             this.AdminSignInPanel.PerformLayout();
@@ -310,7 +297,6 @@
         private System.Windows.Forms.CheckBox ShowPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnAdminSIgnIn;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox TBAdminPassword;
         private System.Windows.Forms.TextBox TBAdminUsername;
         private System.Windows.Forms.Label label1;

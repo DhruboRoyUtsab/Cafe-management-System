@@ -148,6 +148,7 @@
             this.TBACashierPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBACashierPassword.Location = new System.Drawing.Point(821, 368);
             this.TBACashierPassword.Name = "TBACashierPassword";
+            this.TBACashierPassword.PasswordChar = '*';
             this.TBACashierPassword.Size = new System.Drawing.Size(220, 31);
             this.TBACashierPassword.TabIndex = 15;
             // 
@@ -156,6 +157,7 @@
             this.TBACashierConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBACashierConfirmPassword.Location = new System.Drawing.Point(821, 415);
             this.TBACashierConfirmPassword.Name = "TBACashierConfirmPassword";
+            this.TBACashierConfirmPassword.PasswordChar = '*';
             this.TBACashierConfirmPassword.Size = new System.Drawing.Size(220, 31);
             this.TBACashierConfirmPassword.TabIndex = 16;
             // 
@@ -263,10 +265,12 @@
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(12, 120);
+            this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(600, 400);
             this.dataGridView.TabIndex = 27;
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // UpdateBtn
             // 
@@ -358,6 +362,7 @@
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblCashier);
             this.Name = "AddCashier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCashier";
             this.Load += new System.EventHandler(this.AddCashier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
