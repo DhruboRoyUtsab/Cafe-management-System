@@ -33,5 +33,10 @@ namespace CMS.Cashier
             paymentForm.Show();
             this.Close();
         }
+
+        private void btnCardPayNext_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

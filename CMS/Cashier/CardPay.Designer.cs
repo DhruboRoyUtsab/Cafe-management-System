@@ -214,6 +214,7 @@
             this.btnCardPayNext.TabIndex = 7;
             this.btnCardPayNext.Text = "Next";
             this.btnCardPayNext.UseVisualStyleBackColor = false;
+            this.btnCardPayNext.Click += new System.EventHandler(this.btnCardPayNext_Click);
             // 
             // lblCardPayment
             // 
