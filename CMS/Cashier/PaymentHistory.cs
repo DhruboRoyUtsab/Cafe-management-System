@@ -20,16 +20,16 @@ namespace CMS.Cashier
         private void btnTakePayment_Click(object sender, EventArgs e)
         {
             Payment paymentForm = new Payment();
-            paymentForm.Show();       
-            this.Hide();              
+            paymentForm.Show();      
+            this.Hide();
         }
 
 
         private void btnPaymentHistoryBack_Click(object sender, EventArgs e)
         {
             CashierSignIn signInForm = new CashierSignIn();
-            signInForm.Show();   
-            this.Close();       
+            signInForm.Show();
+            this.Hide();
         }
 
 
