@@ -33,8 +33,8 @@ namespace CMS.Cashier
             decimal amount = Convert.ToDecimal(
                 gvAllPay.SelectedRows[0].Cells["TotalPrice"].Value);
 
-            Payment paymentForm = new Payment(orderId, amount);
-            paymentForm.Show();
+            Payment p = new Payment(orderId, amount);
+            p.Show();
             this.Hide();
         }
 
