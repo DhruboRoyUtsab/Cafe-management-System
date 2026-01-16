@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CMS.Admin;
+using CMS.Assets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,7 +54,17 @@ namespace CMS
             username = TBAdminUsername.Text;
             password = TBAdminPassword.Text;
             connect();
-            MessageBox.Show("Username: " + username + "\nPassword: " + password);
+            //MessageBox.Show("Username: " + username + "\nPassword: " + password);
+            AdminPanel ap = new AdminPanel();
+            ap.Show();
+            this.Hide();
+        }
+
+        private void BckBtn_Click(object sender, EventArgs e)
+        {
+            Homepage hm = new Homepage();
+            hm.Show();
+            this.Hide();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

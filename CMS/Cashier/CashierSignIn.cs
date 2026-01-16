@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.Assets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace CMS
         private void cbCashierShowPassword_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BckBtn_Click(object sender, EventArgs e)
+        {
+            Homepage hm = new Homepage();
+            hm.Show();
+            this.Hide();
         }
     }
 }

@@ -60,6 +60,7 @@
             this.CBtn.TabIndex = 26;
             this.CBtn.Text = "Manage Cashier";
             this.CBtn.UseVisualStyleBackColor = false;
+            this.CBtn.Click += new System.EventHandler(this.CBtn_Click);
             // 
             // WBtn
             // 
@@ -74,6 +75,7 @@
             this.WBtn.TabIndex = 27;
             this.WBtn.Text = "Manage Waiter";
             this.WBtn.UseVisualStyleBackColor = false;
+            this.WBtn.Click += new System.EventHandler(this.WBtn_Click);
             // 
             // ChfBtn
             // 
@@ -88,6 +90,7 @@
             this.ChfBtn.TabIndex = 28;
             this.ChfBtn.Text = "Manage Chef";
             this.ChfBtn.UseVisualStyleBackColor = false;
+            this.ChfBtn.Click += new System.EventHandler(this.ChfBtn_Click);
             // 
             // bckBtn
             // 
@@ -102,6 +105,7 @@
             this.bckBtn.TabIndex = 29;
             this.bckBtn.Text = "Back";
             this.bckBtn.UseVisualStyleBackColor = false;
+            this.bckBtn.Click += new System.EventHandler(this.bckBtn_Click);
             // 
             // AdminPanel
             // 
@@ -116,6 +120,7 @@
             this.Controls.Add(this.lblAdminPanel);
             this.Name = "AdminPanel";
             this.Text = "AdminPanel";
+            this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

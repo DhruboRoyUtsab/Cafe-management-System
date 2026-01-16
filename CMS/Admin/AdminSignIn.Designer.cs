@@ -47,6 +47,7 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblSignIn = new System.Windows.Forms.Label();
             this.LogoPanel = new System.Windows.Forms.Panel();
+            this.BckBtn = new System.Windows.Forms.Button();
             this.AdminSignInPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.BckBtn);
             this.panel1.Controls.Add(this.BtnAdminSIgnIn);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.TBAdminPassword);
@@ -265,6 +267,21 @@
             this.LogoPanel.Size = new System.Drawing.Size(590, 700);
             this.LogoPanel.TabIndex = 0;
             // 
+            // BckBtn
+            // 
+            this.BckBtn.BackColor = System.Drawing.Color.Gray;
+            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.BckBtn.Location = new System.Drawing.Point(805, 511);
+            this.BckBtn.Name = "BckBtn";
+            this.BckBtn.Size = new System.Drawing.Size(100, 35);
+            this.BckBtn.TabIndex = 54;
+            this.BckBtn.Text = "Back";
+            this.BckBtn.UseVisualStyleBackColor = false;
+            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
+            // 
             // AdminSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +317,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BckBtn;
     }
 }
 

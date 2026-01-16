@@ -156,6 +156,14 @@ namespace CMS.Admin
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        private void BckBtn_Click(object sender, EventArgs e)
+        {
+            AdminPanel ad = new AdminPanel();
+            ad.Show();
+            this.Hide();
+        }
+
         private new void Update()
         {
             try
