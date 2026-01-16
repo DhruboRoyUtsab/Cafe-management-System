@@ -1,4 +1,5 @@
 ﻿using CMS.Admin;
+using CMS.Assets;
 using CMS.Cashier;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace CMS
             Application.Run(new Payment()); 
             //Application.Run(new Waiter());
             //Application.Run(new Chef());
+            Application.Run(new Homepage());
+
 
 
             //Application.Run(new WaiterSignIn());

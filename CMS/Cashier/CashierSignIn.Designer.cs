@@ -38,12 +38,14 @@
             this.lblCashierSignIn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LogoPanel = new System.Windows.Forms.Panel();
+            this.BckBtn = new System.Windows.Forms.Button();
             this.AdminSignInPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminSignInPanel
             // 
             this.AdminSignInPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminSignInPanel.BackgroundImage")));
+            this.AdminSignInPanel.Controls.Add(this.BckBtn);
             this.AdminSignInPanel.Controls.Add(this.btnCashierSignIn);
             this.AdminSignInPanel.Controls.Add(this.tbCashierPassword);
             this.AdminSignInPanel.Controls.Add(this.tbCashierUserName);
@@ -141,6 +143,21 @@
             this.LogoPanel.Size = new System.Drawing.Size(590, 661);
             this.LogoPanel.TabIndex = 1;
             // 
+            // BckBtn
+            // 
+            this.BckBtn.BackColor = System.Drawing.Color.Gray;
+            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.BckBtn.Location = new System.Drawing.Point(837, 523);
+            this.BckBtn.Name = "BckBtn";
+            this.BckBtn.Size = new System.Drawing.Size(100, 35);
+            this.BckBtn.TabIndex = 55;
+            this.BckBtn.Text = "Back";
+            this.BckBtn.UseVisualStyleBackColor = false;
+            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
+            // 
             // CashierSignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,5 +183,6 @@
         private System.Windows.Forms.Label lblCashierUserName;
         private System.Windows.Forms.Label lblCashierSignIn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BckBtn;
     }
 }

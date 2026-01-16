@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.Assets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,33 @@ namespace CMS.Admin
         public AdminPanel()
         {
             InitializeComponent();
+        }
+
+        private void AdminPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChfBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bckBtn_Click(object sender, EventArgs e)
+        {
+            Homepage hm = new Homepage();
+            hm.Show();
+            this.Hide();
         }
     }
 }

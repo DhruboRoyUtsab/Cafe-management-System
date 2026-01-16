@@ -50,6 +50,7 @@
             this.lblDateofBirth = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblChef = new System.Windows.Forms.Label();
+            this.BckBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.dltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dltBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dltBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.dltBtn.Location = new System.Drawing.Point(302, 578);
+            this.dltBtn.Location = new System.Drawing.Point(237, 578);
             this.dltBtn.Name = "dltBtn";
             this.dltBtn.Size = new System.Drawing.Size(150, 40);
             this.dltBtn.TabIndex = 52;
@@ -75,7 +76,7 @@
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.Location = new System.Drawing.Point(804, 578);
+            this.ClearBtn.Location = new System.Drawing.Point(703, 578);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(100, 40);
             this.ClearBtn.TabIndex = 51;
@@ -90,7 +91,7 @@
             this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.UpdateBtn.Location = new System.Drawing.Point(558, 578);
+            this.UpdateBtn.Location = new System.Drawing.Point(508, 578);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(120, 40);
             this.UpdateBtn.TabIndex = 50;
@@ -101,7 +102,7 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(78, 136);
+            this.dataGridView.Location = new System.Drawing.Point(28, 136);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(600, 400);
             this.dataGridView.TabIndex = 49;
@@ -114,7 +115,7 @@
             this.ShowBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowBtn.Location = new System.Drawing.Point(78, 578);
+            this.ShowBtn.Location = new System.Drawing.Point(28, 578);
             this.ShowBtn.Name = "ShowBtn";
             this.ShowBtn.Size = new System.Drawing.Size(100, 40);
             this.ShowBtn.TabIndex = 48;
@@ -129,7 +130,7 @@
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.AddBtn.Location = new System.Drawing.Point(987, 578);
+            this.AddBtn.Location = new System.Drawing.Point(887, 578);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(120, 40);
             this.AddBtn.TabIndex = 47;
@@ -311,12 +312,28 @@
             this.lblChef.TabIndex = 31;
             this.lblChef.Text = "CHEF";
             // 
+            // BckBtn
+            // 
+            this.BckBtn.BackColor = System.Drawing.Color.Gray;
+            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.BckBtn.Location = new System.Drawing.Point(1063, 578);
+            this.BckBtn.Name = "BckBtn";
+            this.BckBtn.Size = new System.Drawing.Size(100, 40);
+            this.BckBtn.TabIndex = 53;
+            this.BckBtn.Text = "Back";
+            this.BckBtn.UseVisualStyleBackColor = false;
+            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
+            // 
             // Chef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CMS.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.BckBtn);
             this.Controls.Add(this.dltBtn);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.UpdateBtn);
@@ -371,5 +388,6 @@
         private System.Windows.Forms.Label lblDateofBirth;
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblChef;
+        private System.Windows.Forms.Button BckBtn;
     }
 }
