@@ -1,6 +1,6 @@
 ﻿namespace CMS.Cashier
 {
-    partial class PaymentHistory
+    partial class CurrentOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentHistory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentOrder));
             this.PaymentPanel = new System.Windows.Forms.Panel();
+            this.btnPaymentHistoryBack = new System.Windows.Forms.Button();
             this.btnTakePayment = new System.Windows.Forms.Button();
             this.gvAllPay = new System.Windows.Forms.DataGridView();
             this.btnPaymentHistoryShow = new System.Windows.Forms.Button();
             this.btnPayDelete = new System.Windows.Forms.Button();
             this.lblPaymentHistory = new System.Windows.Forms.Label();
-            this.btnPaymentHistoryBack = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllPay)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,22 @@
             this.PaymentPanel.Name = "PaymentPanel";
             this.PaymentPanel.Size = new System.Drawing.Size(1200, 700);
             this.PaymentPanel.TabIndex = 6;
+            this.PaymentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PaymentPanel_Paint);
+            // 
+            // btnPaymentHistoryBack
+            // 
+            this.btnPaymentHistoryBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPaymentHistoryBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPaymentHistoryBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaymentHistoryBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentHistoryBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPaymentHistoryBack.Location = new System.Drawing.Point(770, 597);
+            this.btnPaymentHistoryBack.Name = "btnPaymentHistoryBack";
+            this.btnPaymentHistoryBack.Size = new System.Drawing.Size(120, 40);
+            this.btnPaymentHistoryBack.TabIndex = 15;
+            this.btnPaymentHistoryBack.Text = "Back";
+            this.btnPaymentHistoryBack.UseVisualStyleBackColor = false;
+            this.btnPaymentHistoryBack.Click += new System.EventHandler(this.btnPaymentHistoryBack_Click);
             // 
             // btnTakePayment
             // 
@@ -114,26 +130,11 @@
             this.lblPaymentHistory.BackColor = System.Drawing.Color.Transparent;
             this.lblPaymentHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentHistory.ForeColor = System.Drawing.Color.White;
-            this.lblPaymentHistory.Location = new System.Drawing.Point(369, 52);
+            this.lblPaymentHistory.Location = new System.Drawing.Point(424, 56);
             this.lblPaymentHistory.Name = "lblPaymentHistory";
-            this.lblPaymentHistory.Size = new System.Drawing.Size(482, 55);
+            this.lblPaymentHistory.Size = new System.Drawing.Size(345, 55);
             this.lblPaymentHistory.TabIndex = 1;
-            this.lblPaymentHistory.Text = "PAYMENT HISTORY";
-            // 
-            // btnPaymentHistoryBack
-            // 
-            this.btnPaymentHistoryBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPaymentHistoryBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPaymentHistoryBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentHistoryBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentHistoryBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPaymentHistoryBack.Location = new System.Drawing.Point(770, 597);
-            this.btnPaymentHistoryBack.Name = "btnPaymentHistoryBack";
-            this.btnPaymentHistoryBack.Size = new System.Drawing.Size(120, 40);
-            this.btnPaymentHistoryBack.TabIndex = 15;
-            this.btnPaymentHistoryBack.Text = "Back";
-            this.btnPaymentHistoryBack.UseVisualStyleBackColor = false;
-            this.btnPaymentHistoryBack.Click += new System.EventHandler(this.btnPaymentHistoryBack_Click);
+            this.lblPaymentHistory.Text = "Current Orders";
             // 
             // PaymentHistory
             // 
@@ -142,6 +143,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.PaymentPanel);
             this.Name = "PaymentHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentHistory";
             this.PaymentPanel.ResumeLayout(false);
             this.PaymentPanel.PerformLayout();

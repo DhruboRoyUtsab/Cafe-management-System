@@ -106,11 +106,11 @@
     <Compile Include="Cashier\Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cashier\PaymentHistory.cs">
+    <Compile Include="Cashier\CurrentOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cashier\PaymentHistory.Designer.cs">
-      <DependentUpon>PaymentHistory.cs</DependentUpon>
+    <Compile Include="Cashier\CurrentOrder.Designer.cs">
+      <DependentUpon>CurrentOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\WaiterSignIn.cs" />
     <Compile Include="CMSDbDataSet.Designer.cs">
@@ -156,8 +156,8 @@
     <EmbeddedResource Include="Cashier\Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cashier\PaymentHistory.resx">
-      <DependentUpon>PaymentHistory.cs</DependentUpon>
+    <EmbeddedResource Include="Cashier\CurrentOrder.resx">
+      <DependentUpon>CurrentOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Order.resx">
       <DependentUpon>Order.cs</DependentUpon>

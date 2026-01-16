@@ -86,7 +86,7 @@
             this.clrBtn.Name = "clrBtn";
             this.clrBtn.Size = new System.Drawing.Size(120, 40);
             this.clrBtn.TabIndex = 27;
-            this.clrBtn.Text = resources.GetString("clrBtn.Text");
+            this.clrBtn.Text = "Clear";
             this.clrBtn.UseVisualStyleBackColor = false;
             this.clrBtn.Click += new System.EventHandler(this.clrBtn_Click);
             // 

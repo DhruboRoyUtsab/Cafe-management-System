@@ -147,6 +147,7 @@ namespace CMS.Waiter
         private void btnOrderNext_Click(object sender, EventArgs e)
         {
             var items = GetSelectedItems();
+
             if (items.Count == 0)
             {
                 MessageBox.Show("Select at least one coffee item.");
@@ -157,21 +158,26 @@ namespace CMS.Waiter
             int totalPrice = items.Sum(i => i.Item2);
 
             SqlConnection conn = new SqlConnection(
-            @"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
+                @"Data Source=UTSAB-PC\SQLEXPRESS;
+          Initial Catalog=CMSDb;
+          Integrated Security=True;
+          Encrypt=True;
+          TrustServerCertificate=True;");
+
             conn.Open();
 
             SqlCommand cmd = new SqlCommand(
                 "INSERT INTO Orders (Items, TotalPrice) VALUES (@items, @price)", conn);
+
             cmd.Parameters.AddWithValue("@items", itemNames);
             cmd.Parameters.AddWithValue("@price", totalPrice);
-            cmd.ExecuteNonQuery();
 
+            cmd.ExecuteNonQuery();
             conn.Close();
 
-            foreach (var cb in Controls.OfType<CheckBox>())
-                cb.Checked = false;
-
             MessageBox.Show("Order placed!");
+
+            ClearCheckBoxes(this);
             Show();
         }
 
