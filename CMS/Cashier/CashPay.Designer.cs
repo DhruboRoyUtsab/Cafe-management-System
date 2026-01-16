@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashPay));
             this.PaymentPanel = new System.Windows.Forms.Panel();
-            this.btnCashPayUpdate = new System.Windows.Forms.Button();
+            this.btnCashPayBack = new System.Windows.Forms.Button();
+            this.tbOrderIdCash = new System.Windows.Forms.TextBox();
+            this.lblOrderId = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tbCashierUserName = new System.Windows.Forms.TextBox();
@@ -41,11 +43,9 @@
             this.btnCashPayNext = new System.Windows.Forms.Button();
             this.lblCashPayment = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCashPayBack = new System.Windows.Forms.Button();
             this.btnCashPayShow = new System.Windows.Forms.Button();
             this.gvCash = new System.Windows.Forms.DataGridView();
-            this.lblOrderId = new System.Windows.Forms.Label();
-            this.tbOrderIdCash = new System.Windows.Forms.TextBox();
+            this.btnCashPayUpdate = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCash)).BeginInit();
@@ -72,19 +72,40 @@
             this.PaymentPanel.Size = new System.Drawing.Size(1200, 700);
             this.PaymentPanel.TabIndex = 4;
             // 
-            // btnCashPayUpdate
+            // btnCashPayBack
             // 
-            this.btnCashPayUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCashPayUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCashPayUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashPayUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashPayUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCashPayUpdate.Location = new System.Drawing.Point(420, 609);
-            this.btnCashPayUpdate.Name = "btnCashPayUpdate";
-            this.btnCashPayUpdate.Size = new System.Drawing.Size(120, 40);
-            this.btnCashPayUpdate.TabIndex = 23;
-            this.btnCashPayUpdate.Text = "Update";
-            this.btnCashPayUpdate.UseVisualStyleBackColor = false;
+            this.btnCashPayBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCashPayBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCashPayBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashPayBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashPayBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCashPayBack.Location = new System.Drawing.Point(977, 537);
+            this.btnCashPayBack.Name = "btnCashPayBack";
+            this.btnCashPayBack.Size = new System.Drawing.Size(120, 40);
+            this.btnCashPayBack.TabIndex = 24;
+            this.btnCashPayBack.Text = "Back";
+            this.btnCashPayBack.UseVisualStyleBackColor = false;
+            this.btnCashPayBack.Click += new System.EventHandler(this.btnCashPayBack_Click);
+            // 
+            // tbOrderIdCash
+            // 
+            this.tbOrderIdCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOrderIdCash.Location = new System.Drawing.Point(766, 202);
+            this.tbOrderIdCash.Name = "tbOrderIdCash";
+            this.tbOrderIdCash.Size = new System.Drawing.Size(220, 31);
+            this.tbOrderIdCash.TabIndex = 25;
+            // 
+            // lblOrderId
+            // 
+            this.lblOrderId.AutoSize = true;
+            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
+            this.lblOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderId.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblOrderId.Location = new System.Drawing.Point(639, 202);
+            this.lblOrderId.Name = "lblOrderId";
+            this.lblOrderId.Size = new System.Drawing.Size(91, 24);
+            this.lblOrderId.TabIndex = 24;
+            this.lblOrderId.Text = "Order ID :";
             // 
             // textBox2
             // 
@@ -169,6 +190,7 @@
             this.btnCashPayNext.TabIndex = 7;
             this.btnCashPayNext.Text = "Next";
             this.btnCashPayNext.UseVisualStyleBackColor = false;
+            this.btnCashPayNext.Click += new System.EventHandler(this.btnCashPayNext_Click);
             // 
             // lblCashPayment
             // 
@@ -194,20 +216,6 @@
             this.panel1.Size = new System.Drawing.Size(590, 700);
             this.panel1.TabIndex = 0;
             // 
-            // btnCashPayBack
-            // 
-            this.btnCashPayBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCashPayBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCashPayBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashPayBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashPayBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCashPayBack.Location = new System.Drawing.Point(977, 537);
-            this.btnCashPayBack.Name = "btnCashPayBack";
-            this.btnCashPayBack.Size = new System.Drawing.Size(120, 40);
-            this.btnCashPayBack.TabIndex = 24;
-            this.btnCashPayBack.Text = "Back";
-            this.btnCashPayBack.UseVisualStyleBackColor = false;
-            // 
             // btnCashPayShow
             // 
             this.btnCashPayShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -230,25 +238,19 @@
             this.gvCash.Size = new System.Drawing.Size(490, 440);
             this.gvCash.TabIndex = 1;
             // 
-            // lblOrderId
+            // btnCashPayUpdate
             // 
-            this.lblOrderId.AutoSize = true;
-            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
-            this.lblOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderId.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOrderId.Location = new System.Drawing.Point(639, 202);
-            this.lblOrderId.Name = "lblOrderId";
-            this.lblOrderId.Size = new System.Drawing.Size(91, 24);
-            this.lblOrderId.TabIndex = 24;
-            this.lblOrderId.Text = "Order ID :";
-            // 
-            // tbOrderIdCash
-            // 
-            this.tbOrderIdCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrderIdCash.Location = new System.Drawing.Point(766, 202);
-            this.tbOrderIdCash.Name = "tbOrderIdCash";
-            this.tbOrderIdCash.Size = new System.Drawing.Size(220, 31);
-            this.tbOrderIdCash.TabIndex = 25;
+            this.btnCashPayUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCashPayUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCashPayUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashPayUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashPayUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCashPayUpdate.Location = new System.Drawing.Point(420, 609);
+            this.btnCashPayUpdate.Name = "btnCashPayUpdate";
+            this.btnCashPayUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnCashPayUpdate.TabIndex = 23;
+            this.btnCashPayUpdate.Text = "Update";
+            this.btnCashPayUpdate.UseVisualStyleBackColor = false;
             // 
             // CashPay
             // 

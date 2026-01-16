@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <Compile Include="WaiterRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +166,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WaiterSignIn.resx">
-      <DependentUpon>WaiterSignIn.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="CMSDbDataSet.xsc">
       <DependentUpon>CMSDbDataSet.xsd</DependentUpon>
     </None>
