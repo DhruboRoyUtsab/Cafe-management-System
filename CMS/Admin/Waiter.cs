@@ -138,6 +138,13 @@ namespace CMS.Admin
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        private void Backbtn_Click(object sender, EventArgs e)
+        {
+            AdminPanel ad = new AdminPanel();
+            ad.Show();
+            this.Hide();
+        }
+
         private void ClearBtn_Click(object sender, EventArgs e)
         {
 

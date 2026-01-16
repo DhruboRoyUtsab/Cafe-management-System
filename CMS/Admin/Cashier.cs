@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.Admin;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -156,6 +157,13 @@ namespace CMS
         private void lblSignIn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            AdminPanel ad = new AdminPanel();
+            ad.Show();
+            this.Hide();
         }
 
         private void AddCashier_Load(object sender, EventArgs e)
