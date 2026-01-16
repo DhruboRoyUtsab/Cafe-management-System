@@ -24,9 +24,9 @@ namespace CMS
             //Application.Run(new Payment());
             //Application.Run(new Waiter());
             //Application.Run(new Chef());
-            //Application.Run(new Homepage());
+            Application.Run(new Homepage());
             //Application.Run(new Order());
-            Application.Run(new CurrentOrder());
+            //Application.Run(new CurrentOrder());
 
             //Application.Run(new WaiterSignIn());
         }

@@ -61,7 +61,7 @@
             this.dltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dltBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dltBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.dltBtn.Location = new System.Drawing.Point(237, 578);
+            this.dltBtn.Location = new System.Drawing.Point(340, 578);
             this.dltBtn.Name = "dltBtn";
             this.dltBtn.Size = new System.Drawing.Size(150, 40);
             this.dltBtn.TabIndex = 52;
@@ -76,7 +76,7 @@
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.Location = new System.Drawing.Point(703, 578);
+            this.ClearBtn.Location = new System.Drawing.Point(155, 578);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(100, 40);
             this.ClearBtn.TabIndex = 51;
@@ -130,7 +130,7 @@
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.AddBtn.Location = new System.Drawing.Point(887, 578);
+            this.AddBtn.Location = new System.Drawing.Point(977, 578);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(120, 40);
             this.AddBtn.TabIndex = 47;
@@ -319,7 +319,7 @@
             this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.BckBtn.Location = new System.Drawing.Point(1063, 578);
+            this.BckBtn.Location = new System.Drawing.Point(771, 578);
             this.BckBtn.Name = "BckBtn";
             this.BckBtn.Size = new System.Drawing.Size(100, 40);
             this.BckBtn.TabIndex = 53;

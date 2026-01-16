@@ -50,6 +50,7 @@
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.dltBtn = new System.Windows.Forms.Button();
+            this.Backbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -289,7 +290,7 @@
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ClearBtn.Location = new System.Drawing.Point(738, 562);
+            this.ClearBtn.Location = new System.Drawing.Point(130, 562);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(100, 40);
             this.ClearBtn.TabIndex = 29;
@@ -304,7 +305,7 @@
             this.dltBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dltBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dltBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.dltBtn.Location = new System.Drawing.Point(236, 562);
+            this.dltBtn.Location = new System.Drawing.Point(318, 562);
             this.dltBtn.Name = "dltBtn";
             this.dltBtn.Size = new System.Drawing.Size(150, 40);
             this.dltBtn.TabIndex = 30;
@@ -312,12 +313,28 @@
             this.dltBtn.UseVisualStyleBackColor = false;
             this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
             // 
+            // Backbtn
+            // 
+            this.Backbtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.Backbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Backbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Backbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backbtn.ForeColor = System.Drawing.Color.Transparent;
+            this.Backbtn.Location = new System.Drawing.Point(742, 562);
+            this.Backbtn.Name = "Backbtn";
+            this.Backbtn.Size = new System.Drawing.Size(100, 40);
+            this.Backbtn.TabIndex = 31;
+            this.Backbtn.Text = "Back";
+            this.Backbtn.UseVisualStyleBackColor = false;
+            this.Backbtn.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // AddCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CMS.Properties.Resources.bg;
             this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.Controls.Add(this.Backbtn);
             this.Controls.Add(this.dltBtn);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.UpdateBtn);
@@ -341,7 +358,7 @@
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblCashier);
             this.Name = "AddCashier";
-            this.Text = "Form1";
+            this.Text = "AddCashier";
             this.Load += new System.EventHandler(this.AddCashier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -373,5 +390,6 @@
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Button dltBtn;
+        private System.Windows.Forms.Button Backbtn;
     }
 }
