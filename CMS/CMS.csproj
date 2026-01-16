@@ -64,6 +64,12 @@
     <Compile Include="Admin\Cashier.Designer.cs">
       <DependentUpon>Cashier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Chef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Chef.Designer.cs">
+      <DependentUpon>Chef.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Waiter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Cashier.resx">
       <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Chef.resx">
+      <DependentUpon>Chef.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Waiter.resx">
       <DependentUpon>Waiter.cs</DependentUpon>

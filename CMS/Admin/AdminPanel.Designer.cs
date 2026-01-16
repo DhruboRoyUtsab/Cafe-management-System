@@ -68,7 +68,7 @@
             this.WBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.WBtn.Location = new System.Drawing.Point(422, 261);
+            this.WBtn.Location = new System.Drawing.Point(422, 276);
             this.WBtn.Name = "WBtn";
             this.WBtn.Size = new System.Drawing.Size(250, 50);
             this.WBtn.TabIndex = 27;

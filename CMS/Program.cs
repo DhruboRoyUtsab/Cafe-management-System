@@ -20,7 +20,8 @@ namespace CMS
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new AdminSignIn());
             //Application.Run(new Payment()); 
-            Application.Run(new Waiter());
+            //Application.Run(new Waiter());
+            Application.Run(new Chef());
 
 
             //Application.Run(new WaiterSignIn());
