@@ -41,7 +41,7 @@
             this.lblAdminPanel.BackColor = System.Drawing.Color.Transparent;
             this.lblAdminPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdminPanel.ForeColor = System.Drawing.Color.White;
-            this.lblAdminPanel.Location = new System.Drawing.Point(342, 42);
+            this.lblAdminPanel.Location = new System.Drawing.Point(388, 49);
             this.lblAdminPanel.Name = "lblAdminPanel";
             this.lblAdminPanel.Size = new System.Drawing.Size(466, 73);
             this.lblAdminPanel.TabIndex = 3;
@@ -54,7 +54,7 @@
             this.CBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.CBtn.Location = new System.Drawing.Point(422, 162);
+            this.CBtn.Location = new System.Drawing.Point(468, 169);
             this.CBtn.Name = "CBtn";
             this.CBtn.Size = new System.Drawing.Size(250, 50);
             this.CBtn.TabIndex = 26;
@@ -68,7 +68,7 @@
             this.WBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.WBtn.Location = new System.Drawing.Point(422, 276);
+            this.WBtn.Location = new System.Drawing.Point(468, 283);
             this.WBtn.Name = "WBtn";
             this.WBtn.Size = new System.Drawing.Size(250, 50);
             this.WBtn.TabIndex = 27;
@@ -82,7 +82,7 @@
             this.ChfBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChfBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChfBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ChfBtn.Location = new System.Drawing.Point(422, 381);
+            this.ChfBtn.Location = new System.Drawing.Point(468, 388);
             this.ChfBtn.Name = "ChfBtn";
             this.ChfBtn.Size = new System.Drawing.Size(250, 50);
             this.ChfBtn.TabIndex = 28;
@@ -96,7 +96,7 @@
             this.bckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bckBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.bckBtn.Location = new System.Drawing.Point(462, 490);
+            this.bckBtn.Location = new System.Drawing.Point(508, 497);
             this.bckBtn.Name = "bckBtn";
             this.bckBtn.Size = new System.Drawing.Size(150, 50);
             this.bckBtn.TabIndex = 29;

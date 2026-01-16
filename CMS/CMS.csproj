@@ -76,6 +76,12 @@
     <Compile Include="Admin\Waiter.Designer.cs">
       <DependentUpon>Waiter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashier\CardPay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,19 +119,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
-    <Compile Include="WaiterRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaiterRegister.Designer.cs">
-      <DependentUpon>WaiterRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WaiterSignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaiterSignIn.Designer.cs">
-      <DependentUpon>WaiterSignIn.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Admin\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Waiter.resx">
       <DependentUpon>Waiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\CardPay.resx">
       <DependentUpon>CardPay.cs</DependentUpon>
