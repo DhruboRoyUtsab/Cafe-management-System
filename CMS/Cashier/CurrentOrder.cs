@@ -21,7 +21,7 @@ namespace CMS.Cashier
 
         private void btnTakePayment_Click(object sender, EventArgs e)
         {
-            if (gvAllPay.SelectedRows.Count == 0)
+            if (gvAllPay.SelectedRows.Count == 1)
             {
                 MessageBox.Show("Select an order first.");
                 return;
@@ -41,8 +41,8 @@ namespace CMS.Cashier
 
         private void btnPaymentHistoryBack_Click(object sender, EventArgs e)
         {
-            Homepage signInForm = new Homepage();
-            signInForm.Show();
+            PaymentHistory paymentHistory = new PaymentHistory();
+            paymentHistory.Show();
             this.Hide();
         }
 
@@ -144,12 +144,35 @@ namespace CMS.Cashier
 
         private void gvAllPay_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                gvAllPay.ClearSelection();
+                gvAllPay.Rows[e.RowIndex].Selected = true;
+            }
         }
 
         private void PaymentPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lblPaymentHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvAllPay_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                gvAllPay.ClearSelection();
+                gvAllPay.Rows[e.RowIndex].Selected = true;
+            }
+        }
+
+        private void CurrentOrder_Load(object sender, EventArgs e)
+        {
+            btnPaymentHistoryShow_Click(null, null);
         }
     }
 }

@@ -47,7 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbtnCardPay = new System.Windows.Forms.RadioButton();
             this.rbtnCashPay = new System.Windows.Forms.RadioButton();
-            this.btnPaymentNext = new System.Windows.Forms.Button();
+            this.btnPaymentPay = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.PaymentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.PaymentPanel.Controls.Add(this.panel2);
             this.PaymentPanel.Controls.Add(this.rbtnCardPay);
             this.PaymentPanel.Controls.Add(this.rbtnCashPay);
-            this.PaymentPanel.Controls.Add(this.btnPaymentNext);
+            this.PaymentPanel.Controls.Add(this.btnPaymentPay);
             this.PaymentPanel.Controls.Add(this.lblPayment);
             this.PaymentPanel.Location = new System.Drawing.Point(-8, -20);
             this.PaymentPanel.Name = "PaymentPanel";
@@ -97,6 +97,7 @@
             this.tbOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOrderId.Location = new System.Drawing.Point(532, 150);
             this.tbOrderId.Name = "tbOrderId";
+            this.tbOrderId.ReadOnly = true;
             this.tbOrderId.Size = new System.Drawing.Size(220, 31);
             this.tbOrderId.TabIndex = 39;
             this.tbOrderId.TextChanged += new System.EventHandler(this.tbOrderId_TextChanged);
@@ -106,6 +107,7 @@
             this.tbAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAmount.Location = new System.Drawing.Point(532, 381);
             this.tbAmount.Name = "tbAmount";
+            this.tbAmount.ReadOnly = true;
             this.tbAmount.Size = new System.Drawing.Size(220, 31);
             this.tbAmount.TabIndex = 34;
             this.tbAmount.TextChanged += new System.EventHandler(this.tbAmount_TextChanged);
@@ -149,6 +151,7 @@
             this.tbCard.Name = "tbCard";
             this.tbCard.Size = new System.Drawing.Size(220, 31);
             this.tbCard.TabIndex = 30;
+            this.tbCard.TextChanged += new System.EventHandler(this.tbCard_TextChanged);
             // 
             // tbPhone
             // 
@@ -204,7 +207,7 @@
             // 
             // btnPaymentBack
             // 
-            this.btnPaymentBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPaymentBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnPaymentBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnPaymentBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPaymentBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,20 +258,20 @@
             this.rbtnCashPay.TabStop = true;
             this.rbtnCashPay.UseVisualStyleBackColor = true;
             // 
-            // btnPaymentNext
+            // btnPaymentPay
             // 
-            this.btnPaymentNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPaymentNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPaymentNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentNext.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPaymentNext.Location = new System.Drawing.Point(439, 568);
-            this.btnPaymentNext.Name = "btnPaymentNext";
-            this.btnPaymentNext.Size = new System.Drawing.Size(120, 40);
-            this.btnPaymentNext.TabIndex = 7;
-            this.btnPaymentNext.Text = "Next";
-            this.btnPaymentNext.UseVisualStyleBackColor = false;
-            this.btnPaymentNext.Click += new System.EventHandler(this.btnPaymentNext_Click);
+            this.btnPaymentPay.BackColor = System.Drawing.Color.Green;
+            this.btnPaymentPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPaymentPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaymentPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentPay.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPaymentPay.Location = new System.Drawing.Point(439, 568);
+            this.btnPaymentPay.Name = "btnPaymentPay";
+            this.btnPaymentPay.Size = new System.Drawing.Size(120, 40);
+            this.btnPaymentPay.TabIndex = 7;
+            this.btnPaymentPay.Text = "Pay";
+            this.btnPaymentPay.UseVisualStyleBackColor = false;
+            this.btnPaymentPay.Click += new System.EventHandler(this.btnPaymentNext_Click);
             // 
             // lblPayment
             // 
@@ -299,7 +302,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PaymentPanel;
-        private System.Windows.Forms.Button btnPaymentNext;
+        private System.Windows.Forms.Button btnPaymentPay;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.RadioButton rbtnCardPay;
         private System.Windows.Forms.RadioButton rbtnCashPay;

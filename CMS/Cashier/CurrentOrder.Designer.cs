@@ -89,10 +89,13 @@
             // 
             this.gvAllPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvAllPay.Location = new System.Drawing.Point(142, 127);
+            this.gvAllPay.MultiSelect = false;
             this.gvAllPay.Name = "gvAllPay";
+            this.gvAllPay.ReadOnly = true;
+            this.gvAllPay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvAllPay.Size = new System.Drawing.Size(911, 440);
             this.gvAllPay.TabIndex = 0;
-            this.gvAllPay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAllPay_CellContentClick);
+            this.gvAllPay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAllPay_CellClick);
             // 
             // btnPaymentHistoryShow
             // 
@@ -135,16 +138,18 @@
             this.lblPaymentHistory.Size = new System.Drawing.Size(345, 55);
             this.lblPaymentHistory.TabIndex = 1;
             this.lblPaymentHistory.Text = "Current Orders";
+            this.lblPaymentHistory.Click += new System.EventHandler(this.lblPaymentHistory_Click);
             // 
-            // PaymentHistory
+            // CurrentOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.PaymentPanel);
-            this.Name = "PaymentHistory";
+            this.Name = "CurrentOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PaymentHistory";
+            this.Text = "CurrentOrder";
+            this.Load += new System.EventHandler(this.CurrentOrder_Load);
             this.PaymentPanel.ResumeLayout(false);
             this.PaymentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllPay)).EndInit();

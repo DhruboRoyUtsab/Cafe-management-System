@@ -16,5 +16,17 @@ namespace CMS.Cashier
         {
             InitializeComponent();
         }
+
+        private void PaymentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CurrentOrder_Click(object sender, EventArgs e)
+        {
+            CurrentOrder currentOrder = new CurrentOrder();
+            currentOrder.Show();
+            this.Hide();
+        }
     }
 }

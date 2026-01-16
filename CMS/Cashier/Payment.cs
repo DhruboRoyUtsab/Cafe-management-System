@@ -43,18 +43,45 @@ namespace CMS.Cashier
                 return;
             }
 
-            string method = "";
+            
+            if (string.IsNullOrWhiteSpace(tbName.Text))
+            {
+                MessageBox.Show("Enter customer name.");
+                return;
+            }
 
-            if (rbtnCashPay.Checked)
-                method = "Cash";
-            else if (rbtnCardPay.Checked)
-                method = "Card";
-            else
+            if (string.IsNullOrWhiteSpace(tbPhone.Text))
+            {
+                MessageBox.Show("Enter phone number.");
+                return;
+            }
+
+            
+            if (!rbtnCashPay.Checked && !rbtnCardPay.Checked)
             {
                 MessageBox.Show("Select payment method.");
                 return;
             }
 
+            string method = rbtnCashPay.Checked ? "Cash" : "Card";
+
+            
+            if (method == "Card")
+            {
+                if (string.IsNullOrWhiteSpace(tbCard.Text))
+                {
+                    MessageBox.Show("Enter card number.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(tbPin.Text))
+                {
+                    MessageBox.Show("Enter PIN number.");
+                    return;
+                }
+            }
+
+            
             SqlConnection conn = new SqlConnection(
                 @"Data Source=UTSAB-PC\SQLEXPRESS;
           Initial Catalog=CMSDb;
@@ -62,25 +89,35 @@ namespace CMS.Cashier
           Encrypt=True;
           TrustServerCertificate=True;");
 
-            conn.Open();
+            try
+            {
+                conn.Open();
 
-            SqlCommand cmd = new SqlCommand(
-                @"INSERT INTO PaymentHistory
-          (OrderID, PaymentAmount, PaymentMethod, PaymentStatus)
-          VALUES (@oid, @amt, @method, 'Paid')", conn);
+                SqlCommand cmd = new SqlCommand(
+                    @"INSERT INTO PaymentHistory
+              (OrderID, PaymentAmount, PaymentMethod, PaymentStatus)
+              VALUES (@oid, @amt, @method, 'Paid')", conn);
 
-            cmd.Parameters.AddWithValue("@oid", _orderId);
-            cmd.Parameters.AddWithValue("@amt", _amount);
-            cmd.Parameters.AddWithValue("@method", method);
+                cmd.Parameters.AddWithValue("@oid", _orderId);
+                cmd.Parameters.AddWithValue("@amt", _amount);
+                cmd.Parameters.AddWithValue("@method", method);
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
+                cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Payment successful!");
+                MessageBox.Show("Payment successful!");
 
-            //PaymentHistory ph = new PaymentHistory();
-            //ph.Show();
-            //this.Close();
+                PaymentHistory ph = new PaymentHistory();
+                ph.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void btnPaymentBack_Click(object sender, EventArgs e)
@@ -106,6 +143,11 @@ namespace CMS.Cashier
         }
 
         private void tbOrderId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbCard_TextChanged(object sender, EventArgs e)
         {
 
         }

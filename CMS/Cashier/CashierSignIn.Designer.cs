@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierSignIn));
             this.AdminSignInPanel = new System.Windows.Forms.Panel();
+            this.BckBtn = new System.Windows.Forms.Button();
             this.btnCashierSignIn = new System.Windows.Forms.Button();
             this.tbCashierPassword = new System.Windows.Forms.TextBox();
             this.tbCashierUserName = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.lblCashierSignIn = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LogoPanel = new System.Windows.Forms.Panel();
-            this.BckBtn = new System.Windows.Forms.Button();
             this.AdminSignInPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,21 @@
             this.AdminSignInPanel.Size = new System.Drawing.Size(1200, 700);
             this.AdminSignInPanel.TabIndex = 2;
             // 
+            // BckBtn
+            // 
+            this.BckBtn.BackColor = System.Drawing.Color.Gray;
+            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.BckBtn.Location = new System.Drawing.Point(837, 523);
+            this.BckBtn.Name = "BckBtn";
+            this.BckBtn.Size = new System.Drawing.Size(100, 35);
+            this.BckBtn.TabIndex = 55;
+            this.BckBtn.Text = "Back";
+            this.BckBtn.UseVisualStyleBackColor = false;
+            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
+            // 
             // btnCashierSignIn
             // 
             this.btnCashierSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -71,6 +86,7 @@
             this.btnCashierSignIn.TabIndex = 7;
             this.btnCashierSignIn.Text = "Sign In";
             this.btnCashierSignIn.UseVisualStyleBackColor = false;
+            this.btnCashierSignIn.Click += new System.EventHandler(this.btnCashierSignIn_Click);
             // 
             // tbCashierPassword
             // 
@@ -142,21 +158,6 @@
             this.LogoPanel.Name = "LogoPanel";
             this.LogoPanel.Size = new System.Drawing.Size(590, 661);
             this.LogoPanel.TabIndex = 1;
-            // 
-            // BckBtn
-            // 
-            this.BckBtn.BackColor = System.Drawing.Color.Gray;
-            this.BckBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BckBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.BckBtn.Location = new System.Drawing.Point(837, 523);
-            this.BckBtn.Name = "BckBtn";
-            this.BckBtn.Size = new System.Drawing.Size(100, 35);
-            this.BckBtn.TabIndex = 55;
-            this.BckBtn.Text = "Back";
-            this.BckBtn.UseVisualStyleBackColor = false;
-            this.BckBtn.Click += new System.EventHandler(this.BckBtn_Click);
             // 
             // CashierSignIn
             // 

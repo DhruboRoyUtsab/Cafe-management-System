@@ -1,4 +1,5 @@
 ﻿using CMS.Assets;
+using CMS.Cashier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,13 @@ namespace CMS
         {
             Homepage hm = new Homepage();
             hm.Show();
+            this.Hide();
+        }
+
+        private void btnCashierSignIn_Click(object sender, EventArgs e)
+        {
+            PaymentHistory paymentHistory = new PaymentHistory();
+            paymentHistory.Show();
             this.Hide();
         }
     }
