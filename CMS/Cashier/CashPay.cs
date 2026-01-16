@@ -21,5 +21,18 @@ namespace CMS.Cashier
         {
 
         }
+
+        private void btnCashPayNext_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCashPayBack_Click(object sender, EventArgs e)
+        {
+            Payment paymentForm = new Payment();
+            paymentForm.Show();
+            this.Close();
+        }
+
     }
 }

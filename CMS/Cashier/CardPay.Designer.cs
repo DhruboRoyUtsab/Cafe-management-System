@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardPay));
             this.PaymentPanel = new System.Windows.Forms.Panel();
-            this.btnCardPayUpdate = new System.Windows.Forms.Button();
+            this.btnCardPayBack = new System.Windows.Forms.Button();
+            this.tbOrderIdCard = new System.Windows.Forms.TextBox();
+            this.lblOrderId = new System.Windows.Forms.Label();
             this.tbPin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,9 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCardPayShow = new System.Windows.Forms.Button();
             this.gvCard = new System.Windows.Forms.DataGridView();
-            this.lblOrderId = new System.Windows.Forms.Label();
-            this.tbOrderIdCard = new System.Windows.Forms.TextBox();
-            this.btnCardPayBack = new System.Windows.Forms.Button();
+            this.btnCardPayUpdate = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCard)).BeginInit();
@@ -76,19 +76,41 @@
             this.PaymentPanel.Size = new System.Drawing.Size(1200, 700);
             this.PaymentPanel.TabIndex = 5;
             // 
-            // btnCardPayUpdate
+            // btnCardPayBack
             // 
-            this.btnCardPayUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCardPayUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCardPayUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCardPayUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCardPayUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCardPayUpdate.Location = new System.Drawing.Point(414, 596);
-            this.btnCardPayUpdate.Name = "btnCardPayUpdate";
-            this.btnCardPayUpdate.Size = new System.Drawing.Size(120, 40);
-            this.btnCardPayUpdate.TabIndex = 22;
-            this.btnCardPayUpdate.Text = "Update";
-            this.btnCardPayUpdate.UseVisualStyleBackColor = false;
+            this.btnCardPayBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCardPayBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCardPayBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardPayBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCardPayBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCardPayBack.Location = new System.Drawing.Point(978, 527);
+            this.btnCardPayBack.Name = "btnCardPayBack";
+            this.btnCardPayBack.Size = new System.Drawing.Size(120, 40);
+            this.btnCardPayBack.TabIndex = 25;
+            this.btnCardPayBack.Text = "Back";
+            this.btnCardPayBack.UseVisualStyleBackColor = false;
+            this.btnCardPayBack.Click += new System.EventHandler(this.btnCardPayBack_Click);
+            // 
+            // tbOrderIdCard
+            // 
+            this.tbOrderIdCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOrderIdCard.Location = new System.Drawing.Point(766, 197);
+            this.tbOrderIdCard.Name = "tbOrderIdCard";
+            this.tbOrderIdCard.Size = new System.Drawing.Size(220, 31);
+            this.tbOrderIdCard.TabIndex = 24;
+            // 
+            // lblOrderId
+            // 
+            this.lblOrderId.AutoSize = true;
+            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
+            this.lblOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderId.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblOrderId.Location = new System.Drawing.Point(639, 197);
+            this.lblOrderId.Name = "lblOrderId";
+            this.lblOrderId.Size = new System.Drawing.Size(91, 24);
+            this.lblOrderId.TabIndex = 23;
+            this.lblOrderId.Text = "Order ID :";
+            this.lblOrderId.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbPin
             // 
@@ -240,40 +262,19 @@
             this.gvCard.TabIndex = 0;
             this.gvCard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // lblOrderId
+            // btnCardPayUpdate
             // 
-            this.lblOrderId.AutoSize = true;
-            this.lblOrderId.BackColor = System.Drawing.Color.Transparent;
-            this.lblOrderId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderId.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblOrderId.Location = new System.Drawing.Point(639, 197);
-            this.lblOrderId.Name = "lblOrderId";
-            this.lblOrderId.Size = new System.Drawing.Size(91, 24);
-            this.lblOrderId.TabIndex = 23;
-            this.lblOrderId.Text = "Order ID :";
-            this.lblOrderId.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // tbOrderIdCard
-            // 
-            this.tbOrderIdCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrderIdCard.Location = new System.Drawing.Point(766, 197);
-            this.tbOrderIdCard.Name = "tbOrderIdCard";
-            this.tbOrderIdCard.Size = new System.Drawing.Size(220, 31);
-            this.tbOrderIdCard.TabIndex = 24;
-            // 
-            // btnCardPayBack
-            // 
-            this.btnCardPayBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCardPayBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCardPayBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCardPayBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCardPayBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCardPayBack.Location = new System.Drawing.Point(978, 527);
-            this.btnCardPayBack.Name = "btnCardPayBack";
-            this.btnCardPayBack.Size = new System.Drawing.Size(120, 40);
-            this.btnCardPayBack.TabIndex = 25;
-            this.btnCardPayBack.Text = "Back";
-            this.btnCardPayBack.UseVisualStyleBackColor = false;
+            this.btnCardPayUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCardPayUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCardPayUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCardPayUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCardPayUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCardPayUpdate.Location = new System.Drawing.Point(414, 596);
+            this.btnCardPayUpdate.Name = "btnCardPayUpdate";
+            this.btnCardPayUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnCardPayUpdate.TabIndex = 22;
+            this.btnCardPayUpdate.Text = "Update";
+            this.btnCardPayUpdate.UseVisualStyleBackColor = false;
             // 
             // CardPay
             // 

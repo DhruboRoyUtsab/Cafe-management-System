@@ -26,5 +26,38 @@ namespace CMS.Cashier
         {
 
         }
+
+        private void btnPaymentNext_Click(object sender, EventArgs e)
+        {
+            if (rbtnCashPay.Checked)
+            {
+                CashPay cashForm = new CashPay();
+                cashForm.Show();
+                this.Hide();   
+            }
+            else if (rbtnCardPay.Checked)
+            {
+                CardPay cardForm = new CardPay();
+                cardForm.Show();
+                this.Hide();   
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Please select a payment method.",
+                    "Payment Required",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+        }
+
+        private void btnPaymentBack_Click(object sender, EventArgs e)
+        {
+            PaymentHistory historyForm = new PaymentHistory();
+            historyForm.Show();
+            this.Close();   
+        }
+
     }
 }

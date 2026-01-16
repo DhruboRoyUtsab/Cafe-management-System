@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CMS
+namespace CMS.Waiter
 {
-    public partial class WaiterRegister : Form
+    public partial class Order : Form
     {
-        public WaiterRegister()
+        public Order()
         {
             InitializeComponent();
         }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierSignIn));
             this.AdminSignInPanel = new System.Windows.Forms.Panel();
             this.btnCashierSignIn = new System.Windows.Forms.Button();
-            this.cbCashierShowPassword = new System.Windows.Forms.CheckBox();
             this.tbCashierPassword = new System.Windows.Forms.TextBox();
             this.tbCashierUserName = new System.Windows.Forms.TextBox();
             this.lblCashierPassword = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             // 
             this.AdminSignInPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminSignInPanel.BackgroundImage")));
             this.AdminSignInPanel.Controls.Add(this.btnCashierSignIn);
-            this.AdminSignInPanel.Controls.Add(this.cbCashierShowPassword);
             this.AdminSignInPanel.Controls.Add(this.tbCashierPassword);
             this.AdminSignInPanel.Controls.Add(this.tbCashierUserName);
             this.AdminSignInPanel.Controls.Add(this.lblCashierPassword);
@@ -71,19 +69,6 @@
             this.btnCashierSignIn.TabIndex = 7;
             this.btnCashierSignIn.Text = "Sign In";
             this.btnCashierSignIn.UseVisualStyleBackColor = false;
-            // 
-            // cbCashierShowPassword
-            // 
-            this.cbCashierShowPassword.AutoSize = true;
-            this.cbCashierShowPassword.BackColor = System.Drawing.Color.Transparent;
-            this.cbCashierShowPassword.ForeColor = System.Drawing.Color.White;
-            this.cbCashierShowPassword.Location = new System.Drawing.Point(837, 287);
-            this.cbCashierShowPassword.Name = "cbCashierShowPassword";
-            this.cbCashierShowPassword.Size = new System.Drawing.Size(102, 17);
-            this.cbCashierShowPassword.TabIndex = 6;
-            this.cbCashierShowPassword.Text = "Show Password";
-            this.cbCashierShowPassword.UseVisualStyleBackColor = false;
-            this.cbCashierShowPassword.CheckedChanged += new System.EventHandler(this.cbCashierShowPassword_CheckedChanged);
             // 
             // tbCashierPassword
             // 
@@ -175,7 +160,6 @@
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Panel AdminSignInPanel;
         private System.Windows.Forms.Button btnCashierSignIn;
-        private System.Windows.Forms.CheckBox cbCashierShowPassword;
         private System.Windows.Forms.TextBox tbCashierPassword;
         private System.Windows.Forms.TextBox tbCashierUserName;
         private System.Windows.Forms.Label lblCashierPassword;

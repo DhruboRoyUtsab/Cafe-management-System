@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payment));
             this.PaymentPanel = new System.Windows.Forms.Panel();
+            this.btnPaymentBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbtnCardPay = new System.Windows.Forms.RadioButton();
@@ -37,7 +38,6 @@
             this.btnPaymentNext = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPaymentBack = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,21 @@
             this.PaymentPanel.Name = "PaymentPanel";
             this.PaymentPanel.Size = new System.Drawing.Size(1200, 700);
             this.PaymentPanel.TabIndex = 3;
+            // 
+            // btnPaymentBack
+            // 
+            this.btnPaymentBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPaymentBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPaymentBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaymentBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPaymentBack.Location = new System.Drawing.Point(984, 547);
+            this.btnPaymentBack.Name = "btnPaymentBack";
+            this.btnPaymentBack.Size = new System.Drawing.Size(120, 40);
+            this.btnPaymentBack.TabIndex = 14;
+            this.btnPaymentBack.Text = "Back";
+            this.btnPaymentBack.UseVisualStyleBackColor = false;
+            this.btnPaymentBack.Click += new System.EventHandler(this.btnPaymentBack_Click);
             // 
             // panel3
             // 
@@ -108,6 +123,7 @@
             this.btnPaymentNext.TabIndex = 7;
             this.btnPaymentNext.Text = "Next";
             this.btnPaymentNext.UseVisualStyleBackColor = false;
+            this.btnPaymentNext.Click += new System.EventHandler(this.btnPaymentNext_Click);
             // 
             // lblPayment
             // 
@@ -130,20 +146,6 @@
             this.panel1.Size = new System.Drawing.Size(590, 700);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnPaymentBack
-            // 
-            this.btnPaymentBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPaymentBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPaymentBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentBack.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPaymentBack.Location = new System.Drawing.Point(984, 547);
-            this.btnPaymentBack.Name = "btnPaymentBack";
-            this.btnPaymentBack.Size = new System.Drawing.Size(120, 40);
-            this.btnPaymentBack.TabIndex = 14;
-            this.btnPaymentBack.Text = "Back";
-            this.btnPaymentBack.UseVisualStyleBackColor = false;
             // 
             // Payment
             // 

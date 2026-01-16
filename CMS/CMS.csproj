@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AddCashier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\AddCashier.Designer.cs">
-      <DependentUpon>AddCashier.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,21 +95,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaiterRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaiterRegister.Designer.cs">
-      <DependentUpon>WaiterRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WaiterSignIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaiterSignIn.Designer.cs">
-      <DependentUpon>WaiterSignIn.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Admin\AddCashier.resx">
-      <DependentUpon>AddCashier.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,9 +126,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WaiterSignIn.resx">
-      <DependentUpon>WaiterSignIn.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="CMSDbDataSet.xsc">
       <DependentUpon>CMSDbDataSet.xsd</DependentUpon>
     </None>
