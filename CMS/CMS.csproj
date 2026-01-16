@@ -76,6 +76,12 @@
     <Compile Include="Admin\Waiter.Designer.cs">
       <DependentUpon>Waiter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cashier\PaymentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier\PaymentHistory.Designer.cs">
+      <DependentUpon>PaymentHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Waiter.resx">
       <DependentUpon>Waiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier\PaymentHistory.resx">
+      <DependentUpon>PaymentHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
