@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,7 @@ namespace CMS.Barista
 {
     public partial class BaristaInventory : Form
     {
-        DataTable inventoryTable = new DataTable();
+        
 
         public BaristaInventory()
         {
@@ -27,11 +29,8 @@ namespace CMS.Barista
 
         private void BaristaInventory_Load(object sender, EventArgs e)
         {
-            inventoryTable.Columns.Add("item", typeof(string));
-            inventoryTable.Columns.Add("quantity", typeof(int));
-
             comboBox1.Items.AddRange(new string[]
-            {
+    {
         "Instant Coffee",
         "Latte",
         "Americano",
@@ -40,34 +39,65 @@ namespace CMS.Barista
         "Blue Mountain",
         "Caramel",
         "Black Coffee"
-            });
+    });
 
             comboBox1.SelectedIndex = 0;
-            dataGridView1.DataSource = inventoryTable;
+            LoadInventory();
+        }
+        private void LoadInventory()
+        {
+            SqlConnection conn = new SqlConnection(
+              @"Data Source=UTSAB-PC\SQLEXPRESS;
+              Initial Catalog=CMSDb;
+              Integrated Security=True;
+              Encrypt=True;
+              TrustServerCertificate=True;");
+
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(
+                    "SELECT ItemName, Quantity FROM BaristaInventory", conn);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
         }
 
 
 
         private void btnadd_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection(
+              @"Data Source=UTSAB-PC\SQLEXPRESS;
+              Initial Catalog=CMSDb;
+              Integrated Security=True;
+              Encrypt=True;
+              TrustServerCertificate=True;");
             string item = comboBox1.Text;
             int qty = (int)numericUpDownQty.Value;
 
-            if (string.IsNullOrEmpty(item))
-                return;
+            if (string.IsNullOrWhiteSpace(item)) return;
 
-            DataRow row = inventoryTable.AsEnumerable()
-                .FirstOrDefault(r => r.Field<string>("item") == item);
+            
+                conn.Open();
 
-            if (row == null)
-            {
-                inventoryTable.Rows.Add(item, qty);
-                MessageBox.Show("Item Added");
-            }
-            else
-            {
-                MessageBox.Show("Item already exists. Use Update.");
-            }
+                string query = @"
+IF EXISTS (SELECT 1 FROM BaristaInventory WHERE ItemName = @item)
+    UPDATE BaristaInventory
+    SET Quantity = @qty
+    WHERE ItemName = @item
+ELSE
+    INSERT INTO BaristaInventory (ItemName, Quantity)
+    VALUES (@item, @qty)";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@item", item);
+                cmd.Parameters.AddWithValue("@qty", qty);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Inventory Saved");
+                LoadInventory();
+            
         }
 
 
@@ -76,44 +106,57 @@ namespace CMS.Barista
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            string item = comboBox1.Text;
-            int qty = (int)numericUpDownQty.Value;
+            
+                SqlConnection conn = new SqlConnection(
+              @"Data Source=UTSAB-PC\SQLEXPRESS;
+              Initial Catalog=CMSDb;
+              Integrated Security=True;
+              Encrypt=True;
+              TrustServerCertificate=True;");
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "UPDATE BaristaInventory SET Quantity = @qty WHERE ItemName = @item",
+                    conn);
 
-            DataRow row = inventoryTable.AsEnumerable()
-                .FirstOrDefault(r => r.Field<string>("item") == item);
+                cmd.Parameters.AddWithValue("@item", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@qty", numericUpDownQty.Value);
+                cmd.ExecuteNonQuery();
 
-            if (row != null)
-            {
-                row["quantity"] = qty;
                 MessageBox.Show("Item Updated");
-            }
-            else
-            {
-                MessageBox.Show("Item not found");
-            }
+                LoadInventory();
+            
         }
 
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                inventoryTable.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+            if (dataGridView1.SelectedRows.Count == 0) return;
+
+            string item =
+                dataGridView1.SelectedRows[0].Cells["ItemName"].Value.ToString();
+
+            
+              SqlConnection conn = new SqlConnection(
+              @"Data Source=UTSAB-PC\SQLEXPRESS;
+              Initial Catalog=CMSDb;
+              Integrated Security=True;
+              Encrypt=True;
+              TrustServerCertificate=True;");
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "DELETE FROM BaristaInventory WHERE ItemName = @item", conn);
+                cmd.Parameters.AddWithValue("@item", item);
+                cmd.ExecuteNonQuery();
+
                 MessageBox.Show("Item Deleted");
-            }
-
-        }
-
-        private void btnclear_Click(object sender, EventArgs e)
-        {
-            comboBox1.SelectedIndex = 0;
-            numericUpDownQty.Value = 0;
+                LoadInventory();
+            
+            
         }
 
         private void btnshow_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = inventoryTable;
-
+            LoadInventory();
         }
 
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
@@ -133,14 +176,22 @@ namespace CMS.Barista
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string item = comboBox1.Text;
+            
+                SqlConnection conn = new SqlConnection(
+              @"Data Source=UTSAB-PC\SQLEXPRESS;
+              Initial Catalog=CMSDb;
+              Integrated Security=True;
+              Encrypt=True;
+              TrustServerCertificate=True;");
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT Quantity FROM BaristaInventory WHERE ItemName = @item", conn);
+                cmd.Parameters.AddWithValue("@item", comboBox1.Text);
 
-            DataRow row = inventoryTable.AsEnumerable()
-                .FirstOrDefault(r => r.Field<string>("item") == item);
-
-            numericUpDownQty.Value = row != null
-                ? Convert.ToInt32(row["quantity"])
-                : 0;
+                object result = cmd.ExecuteScalar();
+                numericUpDownQty.Value = result != null ? Convert.ToInt32(result) : 0;
+            
+            
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.Chef;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,9 +41,9 @@ namespace CMS.Assets
 
         private void ChfBtn_Click(object sender, EventArgs e)
         {
-            //ChefSignIn ch = new ChefSignIn();
-            //ch.Show();
-            //this.Hide();
+            Baristasignin baristasignin = new Baristasignin();
+            baristasignin.Show();
+            this.Hide();
         }
     }
 }
