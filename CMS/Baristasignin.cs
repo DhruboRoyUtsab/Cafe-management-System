@@ -44,5 +44,10 @@ namespace CMS.Chef
             baristaInventory.Show();
             this.Hide();
         }
+
+        private void usernametxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

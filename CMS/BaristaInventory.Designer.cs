@@ -40,29 +40,30 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.InstantCoffeeUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.LatteUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.AmericanoUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.BlackcoffeeUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.CaramelUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.BluemountainUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.CappuccinoUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.MoccaUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.btnadd = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.btnshow = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cmsDbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstantCoffeeUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LatteUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmericanoUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlackcoffeeUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CaramelUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BluemountainUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CappuccinoUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoccaUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsDbDataSet1
@@ -72,11 +73,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 81);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(491, 381);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -170,7 +173,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 29);
             this.label6.TabIndex = 9;
-            this.label6.Text = "4. MOCHA";
+            this.label6.Text = "4. MOCCA";
             // 
             // label7
             // 
@@ -198,62 +201,65 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "2. LATTE";
             // 
-            // numericUpDown1
+            // InstantCoffeeUpDown1
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.Snow;
-            this.numericUpDown1.Location = new System.Drawing.Point(1050, 70);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 12;
+            this.InstantCoffeeUpDown1.BackColor = System.Drawing.Color.Snow;
+            this.InstantCoffeeUpDown1.Location = new System.Drawing.Point(1050, 70);
+            this.InstantCoffeeUpDown1.Name = "InstantCoffeeUpDown1";
+            this.InstantCoffeeUpDown1.Size = new System.Drawing.Size(120, 22);
+            this.InstantCoffeeUpDown1.TabIndex = 12;
+            this.InstantCoffeeUpDown1.ValueChanged += new System.EventHandler(this.InstantCoffeeUpDown1_ValueChanged);
             // 
-            // numericUpDown2
+            // LatteUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(1050, 116);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown2.TabIndex = 13;
+            this.LatteUpDown2.Location = new System.Drawing.Point(1050, 116);
+            this.LatteUpDown2.Name = "LatteUpDown2";
+            this.LatteUpDown2.Size = new System.Drawing.Size(120, 22);
+            this.LatteUpDown2.TabIndex = 13;
+            this.LatteUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
-            // numericUpDown3
+            // AmericanoUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(1050, 162);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown3.TabIndex = 14;
+            this.AmericanoUpDown3.Location = new System.Drawing.Point(1050, 162);
+            this.AmericanoUpDown3.Name = "AmericanoUpDown3";
+            this.AmericanoUpDown3.Size = new System.Drawing.Size(120, 22);
+            this.AmericanoUpDown3.TabIndex = 14;
             // 
-            // numericUpDown4
+            // BlackcoffeeUpDown8
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(1050, 384);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown4.TabIndex = 15;
+            this.BlackcoffeeUpDown8.Location = new System.Drawing.Point(1050, 384);
+            this.BlackcoffeeUpDown8.Name = "BlackcoffeeUpDown8";
+            this.BlackcoffeeUpDown8.Size = new System.Drawing.Size(120, 22);
+            this.BlackcoffeeUpDown8.TabIndex = 15;
+            this.BlackcoffeeUpDown8.ValueChanged += new System.EventHandler(this.BlackcoffeeUpDown8_ValueChanged);
             // 
-            // numericUpDown5
+            // CaramelUpDown7
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(1050, 338);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown5.TabIndex = 16;
+            this.CaramelUpDown7.Location = new System.Drawing.Point(1050, 338);
+            this.CaramelUpDown7.Name = "CaramelUpDown7";
+            this.CaramelUpDown7.Size = new System.Drawing.Size(120, 22);
+            this.CaramelUpDown7.TabIndex = 16;
             // 
-            // numericUpDown6
+            // BluemountainUpDown6
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(1050, 290);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown6.TabIndex = 17;
+            this.BluemountainUpDown6.Location = new System.Drawing.Point(1050, 290);
+            this.BluemountainUpDown6.Name = "BluemountainUpDown6";
+            this.BluemountainUpDown6.Size = new System.Drawing.Size(120, 22);
+            this.BluemountainUpDown6.TabIndex = 17;
             // 
-            // numericUpDown7
+            // CappuccinoUpDown5
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(1050, 252);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown7.TabIndex = 18;
+            this.CappuccinoUpDown5.Location = new System.Drawing.Point(1050, 253);
+            this.CappuccinoUpDown5.Name = "CappuccinoUpDown5";
+            this.CappuccinoUpDown5.Size = new System.Drawing.Size(120, 22);
+            this.CappuccinoUpDown5.TabIndex = 18;
             // 
-            // numericUpDown8
+            // MoccaUpDown4
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(1050, 205);
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown8.TabIndex = 19;
+            this.MoccaUpDown4.Location = new System.Drawing.Point(1050, 205);
+            this.MoccaUpDown4.Name = "MoccaUpDown4";
+            this.MoccaUpDown4.Size = new System.Drawing.Size(120, 22);
+            this.MoccaUpDown4.TabIndex = 19;
             // 
             // btnadd
             // 
@@ -265,6 +271,7 @@
             this.btnadd.TabIndex = 20;
             this.btnadd.Text = "ADD";
             this.btnadd.UseVisualStyleBackColor = false;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btnupdate
             // 
@@ -276,6 +283,7 @@
             this.btnupdate.TabIndex = 21;
             this.btnupdate.Text = "UPDATE";
             this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btndelete
             // 
@@ -287,6 +295,7 @@
             this.btndelete.TabIndex = 22;
             this.btndelete.Text = "DELETE";
             this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnclear
             // 
@@ -298,17 +307,29 @@
             this.btnclear.TabIndex = 23;
             this.btnclear.Text = "CLEAR";
             this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btnshow
             // 
             this.btnshow.BackColor = System.Drawing.Color.Sienna;
             this.btnshow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnshow.Location = new System.Drawing.Point(536, 422);
+            this.btnshow.Location = new System.Drawing.Point(531, 414);
             this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(131, 40);
+            this.btnshow.Size = new System.Drawing.Size(100, 36);
             this.btnshow.TabIndex = 24;
             this.btnshow.Text = "SHOW";
             this.btnshow.UseVisualStyleBackColor = false;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(760, 426);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(300, 50);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // BaristaInventory
             // 
@@ -317,19 +338,20 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1182, 653);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnshow);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.numericUpDown8);
-            this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.numericUpDown6);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.MoccaUpDown4);
+            this.Controls.Add(this.CappuccinoUpDown5);
+            this.Controls.Add(this.BluemountainUpDown6);
+            this.Controls.Add(this.CaramelUpDown7);
+            this.Controls.Add(this.BlackcoffeeUpDown8);
+            this.Controls.Add(this.AmericanoUpDown3);
+            this.Controls.Add(this.LatteUpDown2);
+            this.Controls.Add(this.InstantCoffeeUpDown1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -341,18 +363,18 @@
             this.Controls.Add(this.lblCashierUserName);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BaristaInventory";
-            this.Text = "BaristaInventory";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.BaristaInventory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmsDbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InstantCoffeeUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LatteUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AmericanoUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlackcoffeeUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CaramelUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BluemountainUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CappuccinoUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoccaUpDown4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,18 +393,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown InstantCoffeeUpDown1;
+        private System.Windows.Forms.NumericUpDown LatteUpDown2;
+        private System.Windows.Forms.NumericUpDown AmericanoUpDown3;
+        private System.Windows.Forms.NumericUpDown BlackcoffeeUpDown8;
+        private System.Windows.Forms.NumericUpDown CaramelUpDown7;
+        private System.Windows.Forms.NumericUpDown BluemountainUpDown6;
+        private System.Windows.Forms.NumericUpDown CappuccinoUpDown5;
+        private System.Windows.Forms.NumericUpDown MoccaUpDown4;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnupdate;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btnshow;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
