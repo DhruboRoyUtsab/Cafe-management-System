@@ -57,6 +57,7 @@
             this.AdminSignInPanel.Name = "AdminSignInPanel";
             this.AdminSignInPanel.Size = new System.Drawing.Size(1200, 700);
             this.AdminSignInPanel.TabIndex = 2;
+            this.AdminSignInPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminSignInPanel_Paint);
             // 
             // BckBtn
             // 

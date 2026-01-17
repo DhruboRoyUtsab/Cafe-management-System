@@ -76,6 +76,12 @@ namespace CMS.Cashier
                     MessageBox.Show("Enter card number.");
                     return;
                 }
+
+                if (string.IsNullOrWhiteSpace(tbPin.Text))
+                {
+                    MessageBox.Show("Enter PIN.");
+                    return;
+                }
             }
 
 

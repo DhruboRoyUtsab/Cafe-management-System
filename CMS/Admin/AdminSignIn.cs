@@ -18,6 +18,9 @@ namespace CMS
 {
     public partial class AdminSignIn : Form
     {
+        private const string ADMIN_USERNAME = "admin";
+        private const string ADMIN_PASSWORD = "admin";
+
         private string username, password;
         public AdminSignIn()
         {
@@ -48,16 +51,35 @@ namespace CMS
         {
             
         }
+        private bool AdminLogin(string username, string password)
+        {
+            return username == ADMIN_USERNAME && password == ADMIN_PASSWORD;
+        }
+
 
         private void BtnAdminSIgnIn_Click(object sender, EventArgs e)
         {
-            username = TBAdminUsername.Text;
-            password = TBAdminPassword.Text;
-            connect();
-            //MessageBox.Show("Username: " + username + "\nPassword: " + password);
-            AdminPanel ap = new AdminPanel();
-            ap.Show();
-            this.Hide();
+            username = TBAdminUsername.Text.Trim();
+            password = TBAdminPassword.Text.Trim();
+
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Username and Password required", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (AdminLogin(username, password))
+            {
+                AdminPanel ap = new AdminPanel();
+                ap.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Admin Credentials", "Access Denied",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BckBtn_Click(object sender, EventArgs e)
@@ -65,6 +87,11 @@ namespace CMS
             Homepage hm = new Homepage();
             hm.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
