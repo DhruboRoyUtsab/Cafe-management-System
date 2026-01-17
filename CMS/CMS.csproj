@@ -76,16 +76,16 @@
     <Compile Include="Admin\Waiter.Designer.cs">
       <DependentUpon>Waiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaristaInventory.cs">
+    <Compile Include="Barista\BaristaInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaristaInventory.Designer.cs">
+    <Compile Include="Barista\BaristaInventory.Designer.cs">
       <DependentUpon>BaristaInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Baristasignin.cs">
+    <Compile Include="Barista\Baristasignin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Baristasignin.Designer.cs">
+    <Compile Include="Barista\Baristasignin.Designer.cs">
       <DependentUpon>Baristasignin.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\PaymentHistory.cs">
@@ -117,10 +117,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CMSDbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Order.cs">
+    <Compile Include="Waiter\Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Order.Designer.cs">
+    <Compile Include="Waiter\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashier\Payment.cs">
@@ -131,10 +131,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WaiterSignIn.cs">
+    <Compile Include="Waiter\WaiterSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WaiterSignIn.Designer.cs">
+    <Compile Include="Waiter\WaiterSignIn.Designer.cs">
       <DependentUpon>WaiterSignIn.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\AdminPanel.resx">
@@ -152,10 +152,10 @@
     <EmbeddedResource Include="Admin\Waiter.resx">
       <DependentUpon>Waiter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaristaInventory.resx">
+    <EmbeddedResource Include="Barista\BaristaInventory.resx">
       <DependentUpon>BaristaInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Baristasignin.resx">
+    <EmbeddedResource Include="Barista\Baristasignin.resx">
       <DependentUpon>Baristasignin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\PaymentHistory.resx">
@@ -170,7 +170,7 @@
     <EmbeddedResource Include="Cashier\CurrentOrder.resx">
       <DependentUpon>CurrentOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Order.resx">
+    <EmbeddedResource Include="Waiter\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashier\Payment.resx">
@@ -186,7 +186,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WaiterSignIn.resx">
+    <EmbeddedResource Include="Waiter\WaiterSignIn.resx">
       <DependentUpon>WaiterSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CMSDbDataSet.xsc">
