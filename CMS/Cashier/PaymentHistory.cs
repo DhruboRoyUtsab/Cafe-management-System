@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.Assets;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -163,6 +164,13 @@ namespace CMS.Cashier
             tbName.Clear();
             tbPhone.Clear();
             gvAllPay.ClearSelection();
+        }
+
+        private void btnPaymentHistoryBack_Click(object sender, EventArgs e)
+        {
+            Homepage homepage = new Homepage();
+            homepage.Show();
+            this.Hide();
         }
     }
 }

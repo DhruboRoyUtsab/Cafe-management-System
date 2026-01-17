@@ -129,6 +129,7 @@
             this.tbPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPin.Location = new System.Drawing.Point(532, 480);
             this.tbPin.Name = "tbPin";
+            this.tbPin.PasswordChar = '*';
             this.tbPin.Size = new System.Drawing.Size(220, 31);
             this.tbPin.TabIndex = 32;
             // 

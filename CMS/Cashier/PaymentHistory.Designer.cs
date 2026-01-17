@@ -150,6 +150,7 @@
             this.btnPaymentHistoryBack.TabIndex = 15;
             this.btnPaymentHistoryBack.Text = "Back";
             this.btnPaymentHistoryBack.UseVisualStyleBackColor = false;
+            this.btnPaymentHistoryBack.Click += new System.EventHandler(this.btnPaymentHistoryBack_Click);
             // 
             // btnUpdatePayment
             // 
