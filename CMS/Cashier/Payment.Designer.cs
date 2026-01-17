@@ -47,7 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.rbtnCardPay = new System.Windows.Forms.RadioButton();
             this.rbtnCashPay = new System.Windows.Forms.RadioButton();
-            this.btnPaymentPay = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.PaymentPanel.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.PaymentPanel.Controls.Add(this.panel2);
             this.PaymentPanel.Controls.Add(this.rbtnCardPay);
             this.PaymentPanel.Controls.Add(this.rbtnCashPay);
-            this.PaymentPanel.Controls.Add(this.btnPaymentPay);
+            this.PaymentPanel.Controls.Add(this.btnPay);
             this.PaymentPanel.Controls.Add(this.lblPayment);
             this.PaymentPanel.Location = new System.Drawing.Point(-8, -20);
             this.PaymentPanel.Name = "PaymentPanel";
@@ -258,20 +258,20 @@
             this.rbtnCashPay.TabStop = true;
             this.rbtnCashPay.UseVisualStyleBackColor = true;
             // 
-            // btnPaymentPay
+            // btnPay
             // 
-            this.btnPaymentPay.BackColor = System.Drawing.Color.Green;
-            this.btnPaymentPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPaymentPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaymentPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentPay.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPaymentPay.Location = new System.Drawing.Point(439, 568);
-            this.btnPaymentPay.Name = "btnPaymentPay";
-            this.btnPaymentPay.Size = new System.Drawing.Size(120, 40);
-            this.btnPaymentPay.TabIndex = 7;
-            this.btnPaymentPay.Text = "Pay";
-            this.btnPaymentPay.UseVisualStyleBackColor = false;
-            this.btnPaymentPay.Click += new System.EventHandler(this.btnPaymentNext_Click);
+            this.btnPay.BackColor = System.Drawing.Color.Green;
+            this.btnPay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPay.Location = new System.Drawing.Point(439, 568);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(120, 40);
+            this.btnPay.TabIndex = 7;
+            this.btnPay.Text = "Pay";
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPaymentNext_Click);
             // 
             // lblPayment
             // 
@@ -292,6 +292,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.PaymentPanel);
             this.Name = "Payment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";
             this.PaymentPanel.ResumeLayout(false);
             this.PaymentPanel.PerformLayout();
@@ -302,7 +303,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PaymentPanel;
-        private System.Windows.Forms.Button btnPaymentPay;
+        private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.RadioButton rbtnCardPay;
         private System.Windows.Forms.RadioButton rbtnCashPay;

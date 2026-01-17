@@ -1,5 +1,6 @@
 ﻿using CMS.Admin;
 using CMS.Assets;
+using CMS.Waiter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,13 @@ namespace CMS
         }
 
         private void BtnWaiterSIgnIn_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            order.Show();
+            this.Hide();
+        }
+
+        private void WaiterSignIn_Load(object sender, EventArgs e)
         {
 
         }

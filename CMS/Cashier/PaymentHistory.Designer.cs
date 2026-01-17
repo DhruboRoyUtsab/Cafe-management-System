@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentHistory));
             this.PaymentPanel = new System.Windows.Forms.Panel();
+            this.CurrentOrder = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.tbPhone = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.btnPaymentHistoryShow = new System.Windows.Forms.Button();
             this.btnPayDelete = new System.Windows.Forms.Button();
             this.lblPaymentHistory = new System.Windows.Forms.Label();
-            this.CurrentOrder = new System.Windows.Forms.Button();
             this.PaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllPay)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,21 @@
             this.PaymentPanel.TabIndex = 7;
             this.PaymentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PaymentPanel_Paint);
             // 
+            // CurrentOrder
+            // 
+            this.CurrentOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CurrentOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CurrentOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CurrentOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentOrder.ForeColor = System.Drawing.Color.Transparent;
+            this.CurrentOrder.Location = new System.Drawing.Point(815, 597);
+            this.CurrentOrder.Name = "CurrentOrder";
+            this.CurrentOrder.Size = new System.Drawing.Size(200, 40);
+            this.CurrentOrder.TabIndex = 35;
+            this.CurrentOrder.Text = "Current Order";
+            this.CurrentOrder.UseVisualStyleBackColor = false;
+            this.CurrentOrder.Click += new System.EventHandler(this.CurrentOrder_Click);
+            // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -80,6 +95,7 @@
             this.btnClear.TabIndex = 34;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // tbPhone
             // 
@@ -148,6 +164,7 @@
             this.btnUpdatePayment.TabIndex = 23;
             this.btnUpdatePayment.Text = "Update";
             this.btnUpdatePayment.UseVisualStyleBackColor = false;
+            this.btnUpdatePayment.Click += new System.EventHandler(this.btnUpdatePayment_Click);
             // 
             // gvAllPay
             // 
@@ -156,6 +173,7 @@
             this.gvAllPay.Name = "gvAllPay";
             this.gvAllPay.Size = new System.Drawing.Size(754, 446);
             this.gvAllPay.TabIndex = 0;
+            this.gvAllPay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAllPay_CellClick);
             // 
             // btnPaymentHistoryShow
             // 
@@ -170,6 +188,7 @@
             this.btnPaymentHistoryShow.TabIndex = 22;
             this.btnPaymentHistoryShow.Text = "Show";
             this.btnPaymentHistoryShow.UseVisualStyleBackColor = false;
+            this.btnPaymentHistoryShow.Click += new System.EventHandler(this.btnPaymentHistoryShow_Click);
             // 
             // btnPayDelete
             // 
@@ -184,6 +203,7 @@
             this.btnPayDelete.TabIndex = 22;
             this.btnPayDelete.Text = "Delete";
             this.btnPayDelete.UseVisualStyleBackColor = false;
+            this.btnPayDelete.Click += new System.EventHandler(this.btnPayDelete_Click);
             // 
             // lblPaymentHistory
             // 
@@ -197,21 +217,6 @@
             this.lblPaymentHistory.TabIndex = 1;
             this.lblPaymentHistory.Text = "PAYMENT HISTORY";
             // 
-            // CurrentOrder
-            // 
-            this.CurrentOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CurrentOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CurrentOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CurrentOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentOrder.ForeColor = System.Drawing.Color.Transparent;
-            this.CurrentOrder.Location = new System.Drawing.Point(815, 597);
-            this.CurrentOrder.Name = "CurrentOrder";
-            this.CurrentOrder.Size = new System.Drawing.Size(200, 40);
-            this.CurrentOrder.TabIndex = 35;
-            this.CurrentOrder.Text = "Current Order";
-            this.CurrentOrder.UseVisualStyleBackColor = false;
-            this.CurrentOrder.Click += new System.EventHandler(this.CurrentOrder_Click);
-            // 
             // PaymentHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,7 +224,9 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.PaymentPanel);
             this.Name = "PaymentHistory";
-            this.Text = "PaymentHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "S";
+            this.Load += new System.EventHandler(this.PaymentHistory_Load);
             this.PaymentPanel.ResumeLayout(false);
             this.PaymentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllPay)).EndInit();

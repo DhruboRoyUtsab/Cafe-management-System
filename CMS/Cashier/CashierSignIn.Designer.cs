@@ -167,6 +167,7 @@
             this.Controls.Add(this.AdminSignInPanel);
             this.Controls.Add(this.LogoPanel);
             this.Name = "CashierSignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.AdminSignInPanel.ResumeLayout(false);
             this.AdminSignInPanel.PerformLayout();

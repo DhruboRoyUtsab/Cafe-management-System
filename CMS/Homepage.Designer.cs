@@ -130,6 +130,7 @@
             this.Controls.Add(this.CBtn);
             this.Controls.Add(this.panel1);
             this.Name = "Homepage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
             this.ResumeLayout(false);
             this.PerformLayout();

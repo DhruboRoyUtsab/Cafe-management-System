@@ -34,7 +34,7 @@
             this.btnTakePayment = new System.Windows.Forms.Button();
             this.gvAllPay = new System.Windows.Forms.DataGridView();
             this.btnPaymentHistoryShow = new System.Windows.Forms.Button();
-            this.btnPayDelete = new System.Windows.Forms.Button();
+            this.btnOrderDelete = new System.Windows.Forms.Button();
             this.lblPaymentHistory = new System.Windows.Forms.Label();
             this.PaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAllPay)).BeginInit();
@@ -47,7 +47,7 @@
             this.PaymentPanel.Controls.Add(this.btnTakePayment);
             this.PaymentPanel.Controls.Add(this.gvAllPay);
             this.PaymentPanel.Controls.Add(this.btnPaymentHistoryShow);
-            this.PaymentPanel.Controls.Add(this.btnPayDelete);
+            this.PaymentPanel.Controls.Add(this.btnOrderDelete);
             this.PaymentPanel.Controls.Add(this.lblPaymentHistory);
             this.PaymentPanel.Location = new System.Drawing.Point(-8, -20);
             this.PaymentPanel.Name = "PaymentPanel";
@@ -97,6 +97,7 @@
             this.gvAllPay.Size = new System.Drawing.Size(911, 440);
             this.gvAllPay.TabIndex = 0;
             this.gvAllPay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAllPay_CellClick);
+            this.gvAllPay.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAllPay_CellContentClick_1);
             // 
             // btnPaymentHistoryShow
             // 
@@ -113,20 +114,20 @@
             this.btnPaymentHistoryShow.UseVisualStyleBackColor = false;
             this.btnPaymentHistoryShow.Click += new System.EventHandler(this.btnPaymentHistoryShow_Click);
             // 
-            // btnPayDelete
+            // btnOrderDelete
             // 
-            this.btnPayDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPayDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPayDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPayDelete.Location = new System.Drawing.Point(241, 597);
-            this.btnPayDelete.Name = "btnPayDelete";
-            this.btnPayDelete.Size = new System.Drawing.Size(120, 40);
-            this.btnPayDelete.TabIndex = 22;
-            this.btnPayDelete.Text = "Delete";
-            this.btnPayDelete.UseVisualStyleBackColor = false;
-            this.btnPayDelete.Click += new System.EventHandler(this.btnPayDelete_Click);
+            this.btnOrderDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnOrderDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOrderDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderDelete.ForeColor = System.Drawing.Color.Transparent;
+            this.btnOrderDelete.Location = new System.Drawing.Point(241, 597);
+            this.btnOrderDelete.Name = "btnOrderDelete";
+            this.btnOrderDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnOrderDelete.TabIndex = 22;
+            this.btnOrderDelete.Text = "Delete";
+            this.btnOrderDelete.UseVisualStyleBackColor = false;
+            this.btnOrderDelete.Click += new System.EventHandler(this.btnPayDelete_Click);
             // 
             // lblPaymentHistory
             // 
@@ -161,7 +162,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PaymentPanel;
-        private System.Windows.Forms.Button btnPayDelete;
+        private System.Windows.Forms.Button btnOrderDelete;
         private System.Windows.Forms.Label lblPaymentHistory;
         private System.Windows.Forms.DataGridView gvAllPay;
         private System.Windows.Forms.Button btnPaymentHistoryShow;

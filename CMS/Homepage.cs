@@ -33,9 +33,9 @@ namespace CMS.Assets
 
         private void WBtn_Click(object sender, EventArgs e)
         {
-            //WaiterSignIn ws = new WaiterSignIn();
-            //ws.Show();
-            //this.Hide();
+            WaiterSignIn ws = new WaiterSignIn();
+            ws.Show();
+            this.Hide();
         }
 
         private void ChfBtn_Click(object sender, EventArgs e)

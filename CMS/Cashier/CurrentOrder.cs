@@ -1,13 +1,6 @@
-﻿using CMS.Assets;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CMS.Cashier
@@ -21,7 +14,7 @@ namespace CMS.Cashier
 
         private void btnTakePayment_Click(object sender, EventArgs e)
         {
-            if (gvAllPay.SelectedRows.Count == 1)
+            if (gvAllPay.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Select an order first.");
                 return;
@@ -51,51 +44,53 @@ namespace CMS.Cashier
         {
             if (gvAllPay.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Select a payment first.");
+                MessageBox.Show("Select an order first.");
                 return;
             }
 
-            int paymentId = Convert.ToInt32(
-                gvAllPay.SelectedRows[0].Cells["PaymentID"].Value
-            );
+            int orderId = Convert.ToInt32(
+                gvAllPay.SelectedRows[0].Cells["OrderId"].Value);
 
-            DialogResult result = MessageBox.Show(
-                "Are you sure you want to delete this payment?",
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to delete this order?",
                 "Confirm Delete",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
+                MessageBoxIcon.Warning);
 
-            if (result != DialogResult.Yes) return;
+            if (confirm != DialogResult.Yes) return;
 
-            try
+            using (SqlConnection conn = new SqlConnection(
+                @"Data Source=UTSAB-PC\SQLEXPRESS;
+          Initial Catalog=CMSDb;
+          Integrated Security=True;
+          Encrypt=True;
+          TrustServerCertificate=True;"))
             {
-                SqlConnection conn = new SqlConnection(
-                    @"Data Source=UTSAB-PC\SQLEXPRESS;
-              Initial Catalog=CMSDb;
-              Integrated Security=True;
-              Encrypt=True;
-              TrustServerCertificate=True;");
-
                 conn.Open();
 
-                SqlCommand cmd = new SqlCommand(
-                    "DELETE FROM PaymentHistory WHERE PaymentID = @id", conn);
-
-                cmd.Parameters.AddWithValue("@id", paymentId);
-                cmd.ExecuteNonQuery();
-
-                conn.Close();
-
-                MessageBox.Show("Payment deleted successfully.");
-
                 
-                btnPaymentHistoryShow_Click(null, null);
+                SqlCommand checkCmd = new SqlCommand(
+                    "SELECT COUNT(*) FROM PaymentHistory WHERE OrderId = @oid", conn);
+                checkCmd.Parameters.AddWithValue("@oid", orderId);
+
+                int paymentCount = (int)checkCmd.ExecuteScalar();
+
+                if (paymentCount > 0)
+                {
+                    MessageBox.Show("This order is already paid and cannot be deleted.");
+                    return;
+                }
+
+               
+                SqlCommand deleteCmd = new SqlCommand(
+                    "DELETE FROM Orders WHERE OrderId = @oid", conn);
+                deleteCmd.Parameters.AddWithValue("@oid", orderId);
+
+                deleteCmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+            MessageBox.Show("Order deleted successfully.");
+            btnPaymentHistoryShow_Click(null, null); 
         }
 
         private new void Show(string query, DataGridView grid)
@@ -173,6 +168,11 @@ namespace CMS.Cashier
         private void CurrentOrder_Load(object sender, EventArgs e)
         {
             btnPaymentHistoryShow_Click(null, null);
+        }
+
+        private void gvAllPay_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

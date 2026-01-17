@@ -156,7 +156,9 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panel1);
             this.Name = "WaiterSignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WaiterSignIn";
+            this.Load += new System.EventHandler(this.WaiterSignIn_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

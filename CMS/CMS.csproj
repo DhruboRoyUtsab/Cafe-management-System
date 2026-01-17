@@ -100,7 +100,6 @@
     <Compile Include="Cashier\CurrentOrder.Designer.cs">
       <DependentUpon>CurrentOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cashier\WaiterSignIn.cs" />
     <Compile Include="CMSDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace CMS.Cashier
 {
@@ -23,6 +24,9 @@ namespace CMS.Cashier
 
             tbOrderId.Text = orderId.ToString();
             tbAmount.Text = amount.ToString("0.00");
+
+            tbOrderId.ReadOnly = true;
+            tbAmount.ReadOnly = true;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -63,62 +67,71 @@ namespace CMS.Cashier
                 return;
             }
 
-            string method = rbtnCashPay.Checked ? "Cash" : "Card";
+            string paidBy = rbtnCashPay.Checked ? "Cash" : "Card";
 
-            
-            if (method == "Card")
+            if (paidBy == "Card")
             {
                 if (string.IsNullOrWhiteSpace(tbCard.Text))
                 {
                     MessageBox.Show("Enter card number.");
                     return;
                 }
-
-                if (string.IsNullOrWhiteSpace(tbPin.Text))
-                {
-                    MessageBox.Show("Enter PIN number.");
-                    return;
-                }
             }
 
-            
+
             SqlConnection conn = new SqlConnection(
                 @"Data Source=UTSAB-PC\SQLEXPRESS;
           Initial Catalog=CMSDb;
           Integrated Security=True;
           Encrypt=True;
           TrustServerCertificate=True;");
-
-            try
             {
-                conn.Open();
+                string query = @"
+        INSERT INTO PaymentHistory
+        (OrderId, Name, Phone, PaymentAmount, PaymentMethod)
+        SELECT
+            OrderId,
+            @Name,
+            @Phone,
+            TotalPrice,
+            @PaymentMethod
+        FROM Orders
+        WHERE OrderId = @OrderId";
 
-                SqlCommand cmd = new SqlCommand(
-                    @"INSERT INTO PaymentHistory
-              (OrderID, PaymentAmount, PaymentMethod, PaymentStatus)
-              VALUES (@oid, @amt, @method, 'Paid')", conn);
+                SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@oid", _orderId);
-                cmd.Parameters.AddWithValue("@amt", _amount);
-                cmd.Parameters.AddWithValue("@method", method);
+                cmd.Parameters.Add("@OrderId", SqlDbType.Int).Value = _orderId;
+                cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 100).Value = tbName.Text;
+                cmd.Parameters.Add("@Phone", SqlDbType.NVarChar, 20).Value = tbPhone.Text;
+                cmd.Parameters.Add("@PaymentMethod", SqlDbType.NVarChar, 20).Value = paidBy;
 
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    conn.Open();
+                    int rows = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Payment successful!");
-
-                PaymentHistory ph = new PaymentHistory();
-                ph.Show();
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                    if (rows == 0)
+                    {
+                        MessageBox.Show("Invalid Order ID. Payment failed.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Payment successful.");
+                        
+                        PaymentHistory paymentHistory = new PaymentHistory();
+                        paymentHistory.Show();
+                        this.Hide();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Database Error");
+                }
             }
         }
+
+        
+
 
         private void btnPaymentBack_Click(object sender, EventArgs e)
         {

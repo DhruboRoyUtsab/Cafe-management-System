@@ -44,7 +44,7 @@
             this.cbBlackCoffee = new System.Windows.Forms.CheckBox();
             this.cbInstantCoffee = new System.Windows.Forms.CheckBox();
             this.btnOrderBack = new System.Windows.Forms.Button();
-            this.btnOrderNext = new System.Windows.Forms.Button();
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.lblPayment = new System.Windows.Forms.Label();
             this.PaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).BeginInit();
@@ -67,7 +67,7 @@
             this.PaymentPanel.Controls.Add(this.cbBlackCoffee);
             this.PaymentPanel.Controls.Add(this.cbInstantCoffee);
             this.PaymentPanel.Controls.Add(this.btnOrderBack);
-            this.PaymentPanel.Controls.Add(this.btnOrderNext);
+            this.PaymentPanel.Controls.Add(this.btnPlaceOrder);
             this.PaymentPanel.Controls.Add(this.lblPayment);
             this.PaymentPanel.Location = new System.Drawing.Point(-8, -20);
             this.PaymentPanel.Name = "PaymentPanel";
@@ -270,20 +270,20 @@
             this.btnOrderBack.UseVisualStyleBackColor = false;
             this.btnOrderBack.Click += new System.EventHandler(this.btnOrderBack_Click);
             // 
-            // btnOrderNext
+            // btnPlaceOrder
             // 
-            this.btnOrderNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnOrderNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnOrderNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderNext.ForeColor = System.Drawing.Color.Transparent;
-            this.btnOrderNext.Location = new System.Drawing.Point(199, 608);
-            this.btnOrderNext.Name = "btnOrderNext";
-            this.btnOrderNext.Size = new System.Drawing.Size(120, 40);
-            this.btnOrderNext.TabIndex = 7;
-            this.btnOrderNext.Text = "Next";
-            this.btnOrderNext.UseVisualStyleBackColor = false;
-            this.btnOrderNext.Click += new System.EventHandler(this.btnOrderNext_Click);
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPlaceOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaceOrder.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPlaceOrder.Location = new System.Drawing.Point(199, 608);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(180, 40);
+            this.btnPlaceOrder.TabIndex = 7;
+            this.btnPlaceOrder.Text = "Place Order";
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnOrderNext_Click);
             // 
             // lblPayment
             // 
@@ -304,6 +304,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.PaymentPanel);
             this.Name = "Order";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order";
             this.PaymentPanel.ResumeLayout(false);
             this.PaymentPanel.PerformLayout();
@@ -316,7 +317,7 @@
 
         private System.Windows.Forms.Panel PaymentPanel;
         private System.Windows.Forms.Button btnOrderBack;
-        private System.Windows.Forms.Button btnOrderNext;
+        private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.Label lblPayment;
         private System.Windows.Forms.CheckBox cbInstantCoffee;
         private System.Windows.Forms.CheckBox cbLatte;
