@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baristasignin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.username = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
@@ -104,7 +105,7 @@
             this.baristasiggnin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.baristasiggnin.Location = new System.Drawing.Point(731, 84);
             this.baristasiggnin.Name = "baristasiggnin";
-            this.baristasiggnin.Size = new System.Drawing.Size(337, 61);
+            this.baristasiggnin.Size = new System.Drawing.Size(325, 58);
             this.baristasiggnin.TabIndex = 6;
             this.baristasiggnin.Text = "BARISTA SIGN IN";
             this.baristasiggnin.Click += new System.EventHandler(this.label4_Click);
@@ -129,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CMS.Properties.Resources.chef_2;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1178, 649);
             this.Controls.Add(this.btnBaristaSignIn);

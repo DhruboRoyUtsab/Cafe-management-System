@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaristaInventory));
             this.cmsDbDataSet1 = new CMS.CMSDbDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblCashierUserName = new System.Windows.Forms.Label();
@@ -313,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CMS.Properties.Resources.chef_2;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.btnshow);

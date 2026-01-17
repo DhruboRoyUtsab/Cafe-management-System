@@ -76,6 +76,18 @@
     <Compile Include="Admin\Waiter.Designer.cs">
       <DependentUpon>Waiter.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaristaInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaristaInventory.Designer.cs">
+      <DependentUpon>BaristaInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baristasignin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baristasignin.Designer.cs">
+      <DependentUpon>Baristasignin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashier\PaymentHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     <EmbeddedResource Include="Admin\Waiter.resx">
       <DependentUpon>Waiter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaristaInventory.resx">
+      <DependentUpon>BaristaInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baristasignin.resx">
+      <DependentUpon>Baristasignin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashier\PaymentHistory.resx">
       <DependentUpon>PaymentHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +217,7 @@
     <Content Include="Assets\atm-card.png" />
     <Content Include="Assets\bg.png" />
     <Content Include="Assets\card.png" />
+    <Content Include="Assets\chef 2.jpg" />
     <Content Include="Assets\dollars %281%29.png" />
     <Content Include="Assets\dollars.png" />
     <Content Include="Assets\logo.png" />
