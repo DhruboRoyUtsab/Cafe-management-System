@@ -20,12 +20,7 @@ namespace CMS.Chef
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(
-    @"Data Source=UTSAB-PC\SQLEXPRESS;
-      Initial Catalog=CMSDb;
-      Integrated Security=True;
-      Encrypt=True;
-      TrustServerCertificate=True;");
+        SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
 
         private void ChefSignin_Load(object sender, EventArgs e)
         {
@@ -60,11 +55,7 @@ namespace CMS.Chef
             {
                 conn.Open();
 
-                string query = @"SELECT COUNT(*) 
-                         FROM Chef 
-                         WHERE name = @name
-                         AND password = @password";
-
+                string query = @"SELECT COUNT(*) FROM Chef WHERE name = @name AND password = @password";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@name", usernametxtbox.Text);
                 cmd.Parameters.AddWithValue("@password", passwordtxtbox.Text);

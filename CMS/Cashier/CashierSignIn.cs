@@ -83,5 +83,10 @@ namespace CMS
         {
 
         }
+
+        private void lblCashierSignIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

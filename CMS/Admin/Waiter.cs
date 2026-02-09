@@ -46,10 +46,11 @@ namespace CMS.Admin
             {
                 SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
                 conn.Open();
-                string q = "UPDATE Waiter SET Name='" + name + "',Email='" + email + "',Gender='" + gender +
+                string query = "UPDATE Waiter SET Name='" + name + "',Email='" + email + "',Gender='" + gender +
                            "',Address='" + address + "',DateOfBirth='" + DTPickerDOB.ToString("yyyy-MM-dd") +
                            "',Password='" + password + "' WHERE ID=" + selectedWaiterId;
-                new SqlCommand(q, conn).ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
                 conn.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -150,6 +151,11 @@ namespace CMS.Admin
             LoadRowToForm(e);
         }
 
+        private void dataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void ClearBtn_Click(object sender, EventArgs e)
         {
 
@@ -205,7 +211,9 @@ namespace CMS.Admin
 
                 SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
                 conn.Open();
-                new SqlCommand("DELETE FROM Waiter WHERE Id=" + selectedWaiterId, conn).ExecuteNonQuery();
+                string query = "DELETE FROM Waiter WHERE Id=" + selectedWaiterId;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
                 conn.Close();
 
                 Show();

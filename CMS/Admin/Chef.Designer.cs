@@ -363,6 +363,7 @@
             this.Name = "Chef";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chef";
+            this.Load += new System.EventHandler(this.Chef_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

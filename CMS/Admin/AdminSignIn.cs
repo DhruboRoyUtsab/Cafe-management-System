@@ -26,15 +26,15 @@ namespace CMS
         {
             InitializeComponent();
         }
-        private void connect()
-        {
-            SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=False;");
-            conn.Open();
-            //string query = "insert into Faculty (Name,Email,DOB,Gender,Qualifications,Dept,Address) values('James','j@gmail.com','2002-10-10','Male','BSc,MSc','CS','AAAAAAAAAAAAAAAAAAAA')";
-            string query = "insert into AdminSignIn (username, password) values('" + username + "','" + password + "')";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-        }
+        //private void connect()
+        //{
+        //    SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=False;");
+        //    conn.Open();
+        //    //string query = "insert into Faculty (Name,Email,DOB,Gender,Qualifications,Dept,Address) values('James','j@gmail.com','2002-10-10','Male','BSc,MSc','CS','AAAAAAAAAAAAAAAAAAAA')";
+        //    string query = "insert into AdminSignIn (username, password) values('" + username + "','" + password + "')";
+        //    SqlCommand cmd = new SqlCommand(query, conn);
+        //    cmd.ExecuteNonQuery();
+        //}
         
 
         private void label1_Click(object sender, EventArgs e)

@@ -169,16 +169,22 @@ namespace CMS.Admin
             LoadRowToForm(e);
         }
 
+        private void Chef_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private new void Update()
         {
             try
             {
                 SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
                 conn.Open();
-                string q = "UPDATE Chef SET Name='" + name + "',Email='" + email + "',Gender='" + gender +
+                string query = "UPDATE Chef SET Name='" + name + "',Email='" + email + "',Gender='" + gender +
                            "',Address='" + address + "',DateOfBirth='" + DTPickerDOB.ToString("yyyy-MM-dd") +
-                           "',Password='" + password + "' WHERE CashierID=" + selectedChefId;
-                new SqlCommand(q, conn).ExecuteNonQuery();
+                           "',Password='" + password + "' WHERE ChefID=" + selectedChefId;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
                 conn.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -196,7 +202,9 @@ namespace CMS.Admin
 
                 SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
                 conn.Open();
-                new SqlCommand("DELETE FROM Chef WHERE ChefID=" + selectedChefId, conn).ExecuteNonQuery();
+                string query = "DELETE FROM Chef WHERE ChefID=" + selectedChefId;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
                 conn.Close();
 
                 Show();

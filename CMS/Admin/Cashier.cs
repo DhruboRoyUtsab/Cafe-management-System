@@ -12,6 +12,7 @@ namespace CMS
         string name, email, password, address, gender;
         DateTime DTPickerDOB;
         int selectedCashierId;
+
         public AddCashier()
         {
             InitializeComponent();
@@ -88,7 +89,7 @@ namespace CMS
             SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
             conn.Open();
 
-            string query = "INSERT INTO Cashier (Name,Email,Gender,Address,DateOfBirth,Password) " +
+            string query = "INSERT INTO Cashier (Name,Email,Gender,Address,DateOfBirth,Password) " + 
                            "VALUES ('" + name + "','" + email + "','" + gender + "','" + address + "','" + DTPickerDOB.ToString("yyyy-MM-dd") + "','" + password + "')";
 
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -101,10 +102,11 @@ namespace CMS
             {
                 SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
                 conn.Open();
-                string q = "UPDATE Cashier SET Name='" + name + "',Email='" + email + "',Gender='" + gender +
+                string query = "UPDATE Cashier SET Name='" + name + "',Email='" + email + "',Gender='" + gender +
                            "',Address='" + address + "',DateOfBirth='" + DTPickerDOB.ToString("yyyy-MM-dd") +
                            "',Password='" + password + "' WHERE CashierID=" + selectedCashierId;
-                new SqlCommand(q, conn).ExecuteNonQuery();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();
                 conn.Close();
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -132,7 +134,9 @@ namespace CMS
 
                 SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
                 conn.Open();
-                new SqlCommand("DELETE FROM Cashier WHERE CashierID=" + selectedCashierId, conn).ExecuteNonQuery();
+                string query = "DELETE FROM Cashier WHERE CashierID=" + selectedCashierId;
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.ExecuteNonQuery();  
                 conn.Close();
 
                 Show();
@@ -170,6 +174,11 @@ namespace CMS
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LoadRowToForm(e);
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void AddCashier_Load(object sender, EventArgs e)

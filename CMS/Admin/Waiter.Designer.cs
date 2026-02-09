@@ -109,6 +109,7 @@
             this.dataGridView.Size = new System.Drawing.Size(600, 400);
             this.dataGridView.TabIndex = 49;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick_1);
             // 
             // ShowBtn
             // 

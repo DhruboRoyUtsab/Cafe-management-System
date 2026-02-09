@@ -59,18 +59,12 @@ namespace CMS.Cashier
 
             if (confirm != DialogResult.Yes) return;
 
-            using (SqlConnection conn = new SqlConnection(
-                @"Data Source=UTSAB-PC\SQLEXPRESS;
-          Initial Catalog=CMSDb;
-          Integrated Security=True;
-          Encrypt=True;
-          TrustServerCertificate=True;"))
+            using (SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"))
             {
                 conn.Open();
 
                 
-                SqlCommand checkCmd = new SqlCommand(
-                    "SELECT COUNT(*) FROM PaymentHistory WHERE OrderId = @oid", conn);
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM PaymentHistory WHERE OrderId = @oid", conn);
                 checkCmd.Parameters.AddWithValue("@oid", orderId);
 
                 int paymentCount = (int)checkCmd.ExecuteScalar();
@@ -97,12 +91,7 @@ namespace CMS.Cashier
         {
             try
             {
-                SqlConnection conn = new SqlConnection(
-                    @"Data Source=UTSAB-PC\SQLEXPRESS;
-              Initial Catalog=CMSDb;
-              Integrated Security=True;
-              Encrypt=True;
-              TrustServerCertificate=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=UTSAB-PC\SQLEXPRESS;Initial Catalog=CMSDb;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;");
 
                 conn.Open();
                 SqlDataAdapter adp = new SqlDataAdapter(query, conn);
@@ -125,14 +114,14 @@ namespace CMS.Cashier
         {
 
             string query = @"
-        SELECT 
-            o.OrderId,
-            o.Items,
-            o.TotalPrice
-        FROM Orders o
-        LEFT JOIN PaymentHistory p ON p.OrderID = o.OrderId
-        WHERE p.OrderID IS NULL
-        ORDER BY o.OrderId DESC";
+            SELECT 
+                o.OrderId,
+                o.Items,
+                o.TotalPrice
+            FROM Orders o
+            LEFT JOIN PaymentHistory p ON p.OrderID = o.OrderId
+            WHERE p.OrderID IS NULL
+            ORDER BY o.OrderId DESC";
 
             Show(query, gvAllPay);
         }

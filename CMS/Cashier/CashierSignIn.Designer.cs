@@ -141,6 +141,7 @@
             this.lblCashierSignIn.Size = new System.Drawing.Size(429, 55);
             this.lblCashierSignIn.TabIndex = 1;
             this.lblCashierSignIn.Text = "CASHIER SIGN IN";
+            this.lblCashierSignIn.Click += new System.EventHandler(this.lblCashierSignIn_Click);
             // 
             // panel1
             // 
